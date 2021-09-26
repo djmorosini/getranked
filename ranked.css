@@ -2,8 +2,12 @@ body {
   font-family: sans-serif;
 }
 
-table {
-  width:max-content;
+.fullP {
+  width: 100%;
+}
+
+.halfP {
+  width: 50%;
 }
 
 th, td {
