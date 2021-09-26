@@ -16,7 +16,7 @@ function updateScore() {
   var upperScore = 0;
   var possiblePoints = 0;
   for (let i = 1; i < 12; i++) {
-    if(parseInt(document.getElementById('score' + i).innerHTML)) {
+    if(isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
       upperScore = parseInt(upperScore) + parseInt(document.getElementById('score' + i).innerHTML);
       possiblePoints += 10;
     }
@@ -24,7 +24,7 @@ function updateScore() {
   //add lower score
   var lowerScore = 0;
   for (let i = 1; i < 4; i++) {
-    if(parseInt(document.getElementById('classScore' + i).innerHTML)) {
+    if(isNaN(parseInt(document.getElementById('classScore' + i).innerHTML))) {
       lowerScore = parseInt(lowerScore) + parseInt(document.getElementById('classScore' + i).innerHTML);
       possiblePoints += 20;
     }
