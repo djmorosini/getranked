@@ -31,7 +31,12 @@ function updateScore() {
     var totalScore = parseInt(upperScore) + parseInt(lowerScore);
     document.getElementById('scoreEarned').innerHTML = totalScore;
     document.getElementById('possiblePoints').innerHTML = possiblePoints;
-    document.getElementById('grade').innerHTML = '';
-    document.getElementById('rankAdvanced').innerHTML = '';
+    document.getElementById('grade').innerHTML = possiblePoints / totalScore;
+    if ((possiblePoints / totalScore)<0.8) {
+      document.getElementById('rankAdvanced').innerHTML = 'No';
+    }
+    else {
+      document.getElementById('rankAdvanced').innerHTML = 'Yes';
+    }
   }
 }
