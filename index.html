@@ -46,101 +46,111 @@
         </tr>
         <tr>
           <td><label>Proper RO usage & uptime</label></td>
-          <td><select id='RO' onchange="updatePoints(this, 'scoreRO', 10)">
+          <td><select id='RO' onchange="updatePoints(this, 'score1', 10)">
             <option value="">Select</option>
             <option value='Pass'>Pass</option>
             <option value='Fail'>Fail</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='scoreRO'></div></td>
+          <td><div id='score1'></div></td>
         </tr>
         <tr>
           <td><label>MK/Zen's usage & uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score2', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score2'></div></td>
         </tr>
         <tr>
           <td><label>Elemental Drain uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score3', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score3'></div></td>
         </tr>
         <tr>
           <td><label>Apporpriate Ultimate usage</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score4', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score4'></div></td>
         </tr>
         <tr>
           <td><label>Combat Prayer usage & uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score5', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score5'></div></td>
         </tr>
         <tr>
           <td><label>Olorime Placement</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score6', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score6'></div></td>
         </tr>
         <tr>
           <td><label>SPC uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score7', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score7'></div></td>
         </tr>
         <tr>
           <td><label>Adds debuffed</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score8', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score8'></div></td>
         </tr>
         <tr>
           <td><label>Callouts, including Warhorns</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score9', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score9'></div></td>
         </tr>
         <tr>
           <td><label>Positioning</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score10', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score10'></div></td>
         </tr>
         <tr>
           <td><label>Overall raid awareness</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'score11', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score11'></div></td>
         </tr>
@@ -156,28 +166,31 @@
         </tr>
         <tr>
           <td><label>Warden: Fletcherflies uptimes</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'classScore1', 20)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='classScore1'></div></td>
         </tr>
         <tr>
           <td><label>Templar: Minor Sorcery uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'classScore2', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='classScore2'></div></td>
         </tr>
         <tr>
           <td><label>Necro: Empowering Grasp uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select onchange="updatePoints(this, 'classScore3', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='classScore3'></div></td>
         </tr>
