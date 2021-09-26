@@ -19,7 +19,7 @@ function updateScore() {
   for (let i = 1; i < 12; i++) {
     alert(parseInt(document.getElementById('score' + i).innerHTML));
     if(parseInt(document.getElementById('score' + i).innerHTML)) {
-      parseInt(upperScore) += parseInt(document.getElementById('score' + i).innerHTML);
+      upperScore = parseInt(upperScore) + parseInt(document.getElementById('score' + i).innerHTML);
       possiblePoints += 10;
     }
   }
@@ -28,7 +28,7 @@ function updateScore() {
   for (let i = 1; i < 4; i++) {
     alert(parseInt(document.getElementById('classScore' + i).innerHTML));
     if(parseInt(document.getElementById('classScore' + i).innerHTML)) {
-      parseInt(lowerScore) += parseInt(document.getElementById('score' + i).innerHTML);
+      lowerScore = parseInt(lowerScore) = parseInt(document.getElementById('score' + i).innerHTML);
       possiblePoints += 20;
     }
     var totalScore = parseInt(upperScore) + parseInt(lowerScore);
