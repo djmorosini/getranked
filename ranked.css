@@ -3,11 +3,15 @@ body {
 }
 
 .fullP {
-  width: 100%;
+  width: 90%;
 }
 
 .halfP {
-  width: 50%;
+  width: 45%;
+}
+
+td select {
+  border: none;
 }
 
 th, td {
