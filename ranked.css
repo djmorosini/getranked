@@ -2,8 +2,13 @@ body {
   font-family: sans-serif;
 }
 
+table {
+  width:max-content;
+}
+
 th, td {
   border: 1px solid black;
+  padding: 2px;
 }
 
 ul
