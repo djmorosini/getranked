@@ -25,7 +25,7 @@ function updateScore() {
   var lowerScore = 0;
   for (let i = 1; i < 4; i++) {
     if(parseInt(document.getElementById('classScore' + i).innerHTML)) {
-      lowerScore = parseInt(lowerScore) + parseInt(document.getElementById('score' + i).innerHTML);
+      lowerScore = parseInt(lowerScore) + parseInt(document.getElementById('classScore' + i).innerHTML);
       possiblePoints += 20;
     }
     var totalScore = parseInt(upperScore) + parseInt(lowerScore);
