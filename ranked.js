@@ -29,6 +29,7 @@ function updateScore() {
       possiblePoints += 20;
     }
     var totalScore = parseInt(upperScore) + parseInt(lowerScore);
+    alert(totalScore);
     document.getElementById('scoreEarned').innerHTML = totalScore;
     document.getElementById('possiblePoints').innerHTML = possiblePoints;
     document.getElementById('grade').innerHTML = '';
