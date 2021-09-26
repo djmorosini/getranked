@@ -2,6 +2,10 @@ body {
   font-family: sans-serif;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 .fullP {
   width: 95%;
 }
@@ -15,7 +19,6 @@ td select {
 }
 
 th, td {
-  border: 1px solid black;
   padding: 2px;
 }
 
