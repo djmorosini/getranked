@@ -9,4 +9,29 @@ function updatePoints(selectObject, scoreID, points) {
   else if (value == "N/A") {
     document.getElementById(scoreID).innerHTML = 'N/A';
   }
+  updateScore()
+}
+function updateScore() {
+  //add upper score
+  var upperScore = 0;
+  var possiblePoints = 0;
+  for (let i = 1; i < 12; i++) {
+    if(parseInt(document.getElementById('score' + i).innerHTML)) {
+      parseInt(upperScore) += parseInt(document.getElementById('score' + i).innerHTML);
+      possiblePoints += 10;
+    }
+  }
+  //add lower score
+  var lowerScore = 0;
+  for (let i = 1; i < 4; i++) {
+    if(parseInt(document.getElementById('classScore' + i).innerHTML)) {
+      parseInt(lowerScore) += parseInt(document.getElementById('score' + i).innerHTML);
+      possiblePoints += 20;
+    }
+    var totalScore = parseInt(upperScore) + parseInt(lowerScore);
+    document.getElementById('scoreEarned').innerHTML = totalScore;
+    document.getElementById('possiblePoints').innerHTML = possiblePoints;
+    document.getElementById('grade').innerHTML = '';
+    document.getElementById('rankAdvanced').innerHTML = '';
+  }
 }
