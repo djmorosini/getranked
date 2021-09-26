@@ -31,8 +31,8 @@ function updateScore() {
     var totalScore = parseInt(upperScore) + parseInt(lowerScore);
     document.getElementById('scoreEarned').innerHTML = totalScore;
     document.getElementById('possiblePoints').innerHTML = possiblePoints;
-    document.getElementById('grade').innerHTML = possiblePoints / totalScore;
-    if ((possiblePoints / totalScore)<0.8) {
+    document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
+    if ((totalScore / possiblePoints)<0.8) {
       document.getElementById('rankAdvanced').innerHTML = 'No';
     }
     else {
