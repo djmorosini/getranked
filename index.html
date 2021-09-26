@@ -138,26 +138,61 @@
       </table>
     </div>
     <div id='class-specific'>
-      <label>Warden: Fletcherflies uptimes</label>
-      <br/>
-      <label>Templar: Minor Sorcery uptime</label>
-      <br/>
-      <label>Necro: Empowering Grasp uptime</label>
-      <br/>
+      <table>
+        <tr>
+          <th>20 points each (class-specific)</th>
+          <th>Pass/Fail</th>
+          <th>Points Earned</th>
+        </tr>
+        <tr>
+          <td><label>Warden: Fletcherflies uptimes</label></td>
+          <td><select>
+            <option>Pass</option>
+            <option>Fail</option>
+            <option>N/A</option>
+          </select></td>
+          <td><div id='classScore1'></div></td>
+        </tr>
+        <tr>
+          <td><label>Templar: Minor Sorcery uptime</label></td>
+          <td><select>
+            <option>Pass</option>
+            <option>Fail</option>
+            <option>N/A</option>
+          </select></td>
+          <td><div id='classScore2'></div></td>
+        </tr>
+        <tr>
+          <td><label>Necro: Empowering Grasp uptime</label></td>
+          <td><select>
+            <option>Pass</option>
+            <option>Fail</option>
+            <option>N/A</option>
+          </select></td>
+          <td><div id='classScore3'></div></td>
+        </tr>
+      </table>
     </div>
     <div id='scoring'>
-      <div style='float:left;'>
+      <div style='float:left; width:200px; word-wrap: normal;'>
         <label>Total Points Possible is dependent on which items are applicaple</label>
         <br/>
         <label>A passing grade of 80% is required to advance rank.</label>
       </div>
-      <label>Score Earned</label><div id='scoreEarned'></div>
-      <br/>
-      <label>Total Points Possible</label><div id='totalScore'></div>
-      <br/>
-      <label>Grade</label><div id='grade'></div>
-      <br/>
-      <label>Rank Advanced?</label><div id='rankAdvanced'></div>
+      <table>
+        <tr>
+          <td><label>Score Earned</label><div id='scoreEarned'></div></td>
+        </tr>
+        <tr>
+          <td><label>Total Points Possible</label><div id='totalScore'></div></td>
+        </tr>
+        <tr>
+          <td><label>Grade</label><div id='grade'></div></td>
+        </tr>
+        <tr>
+          <td><label>Rank Advanced?</label><div id='rankAdvanced'></div></td>
+        </tr>
+      </table>
     </div>
   </div>
 </body>
