@@ -16,9 +16,9 @@
   <div id='page-wrap'>
     <h1 id='title'>Valhalla Healer POV Ranking Scorecard</h1>
     <div id='header-wrap'>
-      <label>Player PSN: </label><textarea></textarea>
+      <label>Player PSN: </label><input id='psn'></input>
       <br/>
-      <label>Class Submitted:</label>
+      <label>Class Submitted: </label>
       <select>
         <option>Dragonknight</option>
         <option>Necromancer</option>
@@ -39,12 +39,13 @@
         </tr>
         <tr>
           <td><label>Proper RO usage & uptime</label></td>
-          <td><select>
-            <option>Pass</option>
-            <option>Fail</option>
-            <option>N/A</option>
+          <td><select id='RO' onchange="updatePoints(this, 'scoreRO', 10)">
+            <option value="">Select</option>
+            <option value='Pass'>Pass</option>
+            <option value='Fail'>Fail</option>
+            <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score1'></div></td>
+          <td><div id='scoreRO'></div></td>
         </tr>
         <tr>
           <td><label>MK/Zen's usage & uptime</label></td>
