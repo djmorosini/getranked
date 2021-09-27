@@ -55,3 +55,7 @@ function showNotepad(selectObject) {
   var sectionTitle = selectObject.value
   document.getElementById('notepad').style.visibility = 'visible';
 }
+
+function closeNotepad() {
+  document.getElementById('notepad').style.visibility = 'hidden';
+}
