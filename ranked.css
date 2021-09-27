@@ -19,8 +19,12 @@ table {
   width: 95%;
 }
 
-.halfP {
-  width: 48%;
+.halfPL {
+  width: 40%;
+}
+
+.halfPR {
+  width: 50%
 }
 
 td select {
