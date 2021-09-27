@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
-  font-size: 3.6vw;
+  font-size: 3.8vw;
+}
+
+h4 {
+  margin: 1px;
 }
 
 table {
