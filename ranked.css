@@ -1,7 +1,6 @@
 body {
   font-family: sans-serif;
   background-color: darkmagenta;
-  width: 99%;
 }
 
 #page-wrap {
@@ -46,7 +45,7 @@ th {
 }
 
 .fullP {
-  width: 97%;
+  width: 96%;
 }
 
 td select {
