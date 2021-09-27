@@ -42,6 +42,7 @@ th {
 
 td select {
   border: none;
+  -webkit-appearance: none;
 }
 
 table, td, th {
