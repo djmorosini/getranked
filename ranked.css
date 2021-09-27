@@ -16,12 +16,21 @@ table {
   font-size: 3.5vw;
 }
 
+.bigTable {
+  min-height: 37.2vh;
+}
+
+.smallTable {
+  min-height: 18.6vh;
+}
+
 .fullP {
   width: 95%;
 }
 
 .halfP {
-  width: 44%;
+  width: 45%;
+  min-height: 18.6vh;
 }
 
 td select {
