@@ -34,19 +34,19 @@ function updateScore() {
       lowerScore = parseInt(lowerScore) + parseInt(document.getElementById('classScore' + i).innerHTML);
       possiblePoints += 20;
     }
-    var totalScore = parseInt(upperScore) + parseInt(lowerScore);
-    document.getElementById('scoreEarned').innerHTML = totalScore;
-    document.getElementById('possiblePoints').innerHTML = possiblePoints;
-    document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
-    if ((totalScore / possiblePoints)<0.8) {
-      document.getElementById('rankAdvanced').innerHTML = 'No';
-      document.getElementById('rankAdvanced').style.color = 'red';
-      document.getElementById('grade').style.color = 'red';
-    }
-    else {
-      document.getElementById('rankAdvanced').innerHTML = 'Yes';
-      document.getElementById('rankAdvanced').style.color = 'green';
-      document.getElementById('grade').style.color = 'green';
-    }
+  }
+  var totalScore = parseInt(upperScore) + parseInt(lowerScore);
+  document.getElementById('scoreEarned').innerHTML = totalScore;
+  document.getElementById('possiblePoints').innerHTML = possiblePoints;
+  document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
+  if ((totalScore / possiblePoints)<0.8) {
+    document.getElementById('rankAdvanced').innerHTML = 'No';
+    document.getElementById('rankAdvanced').style.color = 'red';
+    document.getElementById('grade').style.color = 'red';
+  }
+  else {
+    document.getElementById('rankAdvanced').innerHTML = 'Yes';
+    document.getElementById('rankAdvanced').style.color = 'green';
+    document.getElementById('grade').style.color = 'green';
   }
 }
