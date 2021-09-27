@@ -44,6 +44,11 @@ label a:visited {
   text-decoration: none;
 }
 
+label a:focus {
+  color: black;
+  text-decoration: black;
+}
+
 .title {
   font-weight: bold;
   color:white;
