@@ -1,27 +1,17 @@
 body {
   font-family: sans-serif;
-  font-size: 4vw;
-  min-height: 93vh;
+  font-size: 2.8vw;
 }
 
 .title {
   font-weight: bold;
-  font-size: larger;
 }
 
 table {
   border-collapse: collapse;
   margin-top: 2px;
   margin-bottom: 2px;
-  font-size: 3.5vw;
-}
-
-.bigTable {
-  min-height: 37.2vh;
-}
-
-.smallTable {
-  min-height: 18.6vh;
+  font-size: 3.4vw;
 }
 
 .fullP {
@@ -30,7 +20,6 @@ table {
 
 .halfP {
   width: 45%;
-  min-height: 18.6vh;
 }
 
 td select {
@@ -44,6 +33,11 @@ table, td, th {
 
 th, td, tr {
   padding: 0px;
+  margin: 0px;
+}
+
+td {
+  padding-left: 1px;
 }
 
 ul
