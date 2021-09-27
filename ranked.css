@@ -48,6 +48,7 @@ th {
 td select {
   border: none;
   -webkit-appearance: none;
+  padding: 5px;
 }
 
 table, td, th {

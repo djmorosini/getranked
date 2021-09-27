@@ -42,7 +42,7 @@ function updateScore() {
     else {
       document.getElementById('rankAdvanced').innerHTML = 'Yes';
       document.getElementById('rankAdvanced').style.color = 'green';
-      document.getElementById('grade').style.color = 'red';
+      document.getElementById('grade').style.color = 'green';
     }
   }
 }
