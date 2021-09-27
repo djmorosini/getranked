@@ -4,7 +4,8 @@ body {
 
 table {
   border-collapse: collapse;
-  margin: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .fullP {
@@ -12,7 +13,7 @@ table {
 }
 
 .halfP {
-  width: 40%;
+  width: 42%;
 }
 
 td select {
