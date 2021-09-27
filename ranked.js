@@ -12,6 +12,7 @@ function updatePoints(selectObject, scoreID, points) {
   }
   else if (value == "N/A") {
     document.getElementById(scoreID).innerHTML = 'N/A';
+    document.getElementById(scoreID).style.color = 'black';
     selectObject.style.color = 'black'
   }
   updateScore()
