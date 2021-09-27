@@ -3,10 +3,12 @@ function updatePoints(selectObject, scoreID, points) {
   if(value == "Pass") {
     document.getElementById(scoreID).innerHTML = points;
     document.getElementById(scoreID).style.color = 'green';
+    selectObject.style.color = 'green'
   }
   else if (value == "Fail") {
     document.getElementById(scoreID).innerHTML = 0;
     document.getElementById(scoreID).style.color = 'red';
+    selectObject.style.color = 'red'
   }
   else if (value == "N/A") {
     document.getElementById(scoreID).innerHTML = 'N/A';
