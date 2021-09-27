@@ -4,6 +4,10 @@ body {
   background-color: darkmagenta;
 }
 
+#page-wrap {
+  margin: 0 auto;
+}
+
 #header-wrap {
   color: white;
 }
@@ -20,6 +24,7 @@ input {
 .title {
   font-weight: bold;
   color:white;
+  text-align: center;
 }
 
 table {

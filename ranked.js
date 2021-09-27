@@ -2,9 +2,11 @@ function updatePoints(selectObject, scoreID, points) {
   var value = selectObject.value;
   if(value == "Pass") {
     document.getElementById(scoreID).innerHTML = points;
+    document.getElementById(scoreID).style.color = 'green';
   }
   else if (value == "Fail") {
     document.getElementById(scoreID).innerHTML = 0;
+    document.getElementById(scoreID).style.color = 'red';
   }
   else if (value == "N/A") {
     document.getElementById(scoreID).innerHTML = 'N/A';
@@ -34,9 +36,13 @@ function updateScore() {
     document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
     if ((totalScore / possiblePoints)<0.8) {
       document.getElementById('rankAdvanced').innerHTML = 'No';
+      document.getElementById('rankAdvanced').style.color = 'red';
+      document.getElementById('grade').style.color = 'red';
     }
     else {
       document.getElementById('rankAdvanced').innerHTML = 'Yes';
+      document.getElementById('rankAdvanced').style.color = 'green';
+      document.getElementById('grade').style.color = 'red';
     }
   }
 }
