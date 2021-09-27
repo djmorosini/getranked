@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-  font-size: 2.8vw;
   background-color: darkmagenta;
 }
 
@@ -18,7 +17,6 @@ select {
 }
 
 input {
-  font-size: 2.8vw;
   background-color: lightcoral;
 }
 
@@ -36,7 +34,6 @@ table {
   border-collapse: collapse;
   margin-top: 2px;
   margin-bottom: 2px;
-  font-size: 2.8vw;
   text-align: center;
   background-color:lightcoral;
 }
@@ -68,8 +65,6 @@ th, td, tr {
 
 ul
 {
-    font-family: Arial, Verdana;
-    font-size: 14px;
     margin: 0;
     padding: 0;
     list-style: none;
