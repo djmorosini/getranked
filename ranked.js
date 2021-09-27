@@ -53,4 +53,5 @@ function updateScore() {
 
 function showNotepad(selectObject) {
   var sectionTitle = selectObject.value
+  document.getElementById('notepad').style.visibility = 'visible';
 }
