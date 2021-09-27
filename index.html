@@ -9,6 +9,12 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" media="screen" href="ranked.css" />
   <script src="ranked.js"></script>
+  <style>
+    #notepad {
+      position: absolute;
+      visibility: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -50,7 +56,7 @@
           <th>Points Earned</th>
         </tr>
         <tr>
-          <td><label>Proper RO usage & uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Proper RO usage & uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score1', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -60,7 +66,7 @@
           <td><div id='score1'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label>MK/Zen's usage & uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">MK/Zen's usage & uptime</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score2', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -70,7 +76,7 @@
           <td><div id='score2'></div></td>
         </tr>
         <tr>
-          <td><label>Elemental Drain uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Elemental Drain uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score3', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -80,7 +86,7 @@
           <td><div id='score3'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label>Apporpriate Ultimate usage</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Apporpriate Ultimate usage</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score4', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -90,7 +96,7 @@
           <td><div id='score4'></div></td>
         </tr>
         <tr>
-          <td><label>Combat Prayer usage & uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Combat Prayer usage & uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score5', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -100,7 +106,7 @@
           <td><div id='score5'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label>Olorime Placement</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Olorime Placement</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score6', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -110,7 +116,7 @@
           <td><div id='score6'></div></td>
         </tr>
         <tr>
-          <td><label>SPC uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">SPC uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score7', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -120,7 +126,7 @@
           <td><div id='score7'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label>Adds debuffed</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Adds debuffed</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score8', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -130,7 +136,7 @@
           <td><div id='score8'></div></td>
         </tr>
         <tr>
-          <td><label>Callouts, including Warhorns</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Callouts, including Warhorns</a></label></td>
           <td><select onchange="updatePoints(this, 'score9', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -140,7 +146,7 @@
           <td><div id='score9'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label>Positioning</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Positioning</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score10', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -150,7 +156,7 @@
           <td><div id='score10'></div></td>
         </tr>
         <tr>
-          <td><label>Overall raid awareness</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Overall raid awareness</a></label></td>
           <td><select onchange="updatePoints(this, 'score11', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -169,7 +175,7 @@
           <th>Points Earned</th>
         </tr>
         <tr>
-          <td><label>Warden: Fletcherflies uptimes</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Warden: Fletcherflies uptimes</a></label></td>
           <td><select onchange="updatePoints(this, 'classScore1', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -179,7 +185,7 @@
           <td><div id='classScore1'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label>Templar: Minor Sorcery uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Templar: Minor Sorcery uptime</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'classScore2', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -189,7 +195,7 @@
           <td><div id='classScore2'></div></td>
         </tr>
         <tr>
-          <td><label>Necro: Empowering Grasp uptime</label></td>
+          <td><label><a class="notes" onclick="showNotepad(this)">Necro: Empowering Grasp uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'classScore3', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -228,6 +234,9 @@
         </tr>
       </table>
     </div>
+  </div>
+  <div id="notepad">
+
   </div>
 </body>
 

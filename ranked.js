@@ -50,3 +50,7 @@ function updateScore() {
     document.getElementById('grade').style.color = 'green';
   }
 }
+
+function showNotepad(selectObject) {
+  var sectionTitle = selectObject.value
+}
