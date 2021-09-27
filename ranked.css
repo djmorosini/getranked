@@ -4,8 +4,17 @@ body {
   background-color: darkmagenta;
 }
 
+#header-wrap {
+  color: white;
+}
+
+select {
+  background-color: lightcoral;
+}
+
 input {
   font-size: 2.8vw;
+  background-color: lightcoral;
 }
 
 .title {
@@ -20,6 +29,11 @@ table {
   font-size: 2.8vw;
   text-align: center;
   background-color:lightcoral;
+}
+
+th {
+  background-color: darkorchid;
+  color: white;
 }
 
 .fullP {
