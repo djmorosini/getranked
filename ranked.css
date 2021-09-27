@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: darkmagenta;
+  background-color: #81118B;
 }
 
 #page-wrap {
@@ -13,11 +13,11 @@ body {
 }
 
 select {
-  background-color: lightcoral;
+  background-color: #D3BAEC;
 }
 
 input {
-  background-color: lightcoral;
+  background-color: #D3BAEC;
 }
 
 .title {
@@ -27,7 +27,7 @@ input {
 }
 
 .lightRow {
-  background-color: lightpink !important;
+  background-color: #A98BC8 !important;
 }
 
 table {
@@ -35,11 +35,11 @@ table {
   margin-top: 2px;
   margin-bottom: 2px;
   text-align: center;
-  background-color:lightcoral;
+  background-color:#D3BAEC;
 }
 
 th {
-  background-color: darkorchid;
+  background-color: #8649C3;
   color: white;
   padding: 3px !important;
 }
