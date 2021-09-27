@@ -39,6 +39,7 @@ table {
 th {
   background-color: darkorchid;
   color: white;
+  padding: 3px;
 }
 
 .fullP {
@@ -48,7 +49,7 @@ th {
 td select {
   border: none;
   -webkit-appearance: none;
-  padding: 5px;
+  padding: 2px;
 }
 
 table, td, th {
