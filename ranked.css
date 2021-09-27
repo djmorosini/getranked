@@ -13,7 +13,7 @@ table {
   border-collapse: collapse;
   margin-top: 2px;
   margin-bottom: 2px;
-  font-size: 3.6vw;
+  font-size: 3.5vw;
 }
 
 .fullP {
@@ -34,7 +34,7 @@ table, td, th {
 }
 
 th, td {
-  padding: 2px;
+  padding: 0px;
 }
 
 ul
