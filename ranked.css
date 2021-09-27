@@ -3,6 +3,14 @@ body {
   background-color: #54178A;
 }
 
+.closeNotepad {
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
 #page-wrap {
   margin: 0 auto;
   max-width: 500px;
