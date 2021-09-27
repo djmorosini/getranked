@@ -11,7 +11,7 @@ table {
   border-collapse: collapse;
   margin-top: 2px;
   margin-bottom: 2px;
-  font-size: 3.4vw;
+  font-size: 2.8vw;
   text-align: center;
 }
 
@@ -34,11 +34,7 @@ table, td, th {
 
 th, td, tr {
   padding: 0px;
-  margin: 0px;
-}
-
-td {
-  padding-left: 1px;
+  margin: 0px !important;
 }
 
 ul
