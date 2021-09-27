@@ -19,14 +19,6 @@ table {
   width: 95%;
 }
 
-.halfPL {
-  width: 40%;
-}
-
-.halfPR {
-  width: 50%
-}
-
 td select {
   border: none;
 }
