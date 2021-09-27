@@ -5,13 +5,14 @@ function updatePoints(selectObject, scoreID, points) {
     document.getElementById(scoreID).style.color = 'green';
     selectObject.style.color = 'green'
   }
-  else if (value == "Fail") {
+  else if (value == "Needs Work") {
     document.getElementById(scoreID).innerHTML = 0;
     document.getElementById(scoreID).style.color = 'red';
     selectObject.style.color = 'red'
   }
   else if (value == "N/A") {
     document.getElementById(scoreID).innerHTML = 'N/A';
+    selectObject.style.color = 'black'
   }
   updateScore()
 }
