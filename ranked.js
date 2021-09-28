@@ -53,6 +53,11 @@ function showNotepad(notepadID) {
 function closeNotepad(notepadID) {
   document.getElementById("notepad" + notepadID).style.visibility = 'hidden';
   if(!document.getElementById("notes" + notepadID).value == "") {
-    document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML += " *";
+    document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML += "*";
+  }
+  else {
+    if(document.getElementById("link" + notepadID).innerHTML.includes("*")) {
+      document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML.slice(0,-1);
+    }
   }
 }
