@@ -64,6 +64,8 @@ function closeNotepad(notepadID) {
 
 function showAllNotes() {
   document.getElementById('allNotes').style.visibility = 'visible';
+  document.getElementById('allNotes').innerHTML = ""
+  document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += '<span class="closeNotepad" onclick="closeNotepad(\'allNotes\')">&times;</span>';
   for (let i = 1; i < 15; i++) {
     if(!document.getElementById("notes" + i).value == "") {
       var title = document.getElementById('link' + i).innerHTML;
