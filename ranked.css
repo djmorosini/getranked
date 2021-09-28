@@ -49,6 +49,11 @@ label a:focus {
   text-decoration: black;
 }
 
+label a:active {
+  color: black;
+  text-decoration: black;
+}
+
 .title {
   font-weight: bold;
   color:white;
