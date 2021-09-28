@@ -55,61 +55,46 @@ function showNotepad(selectObject) {
   var sectionTitle = selectObject.innerText;
   if(sectionTitle == "Proper RO usage & uptime") {
     document.getElementById('notepad1').style.visibility = 'visible';
-    document.getElementById('notepad1').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "MK/Zen's usage & uptime") {
     document.getElementById('notepad2').style.visibility = 'visible';
-    document.getElementById('notepad2').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Elemental Drain uptime") {
     document.getElementById('notepad3').style.visibility = 'visible';
-    document.getElementById('notepad3').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Apporpriate Ultimate usage") {
     document.getElementById('notepad4').style.visibility = 'visible';
-    document.getElementById('notepad4').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Combat Prayer usage & uptime") {
     document.getElementById('notepad5').style.visibility = 'visible';
-    document.getElementById('notepad5').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Olorime Placement") {
     document.getElementById('notepad6').style.visibility = 'visible';
-    document.getElementById('notepad6').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "SPC uptime") {
     document.getElementById('notepad7').style.visibility = 'visible';
-    document.getElementById('notepad7').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Adds debuffed") {
     document.getElementById('notepad8').style.visibility = 'visible';
-    document.getElementById('notepad8').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Callouts, including Warhorns") {
     document.getElementById('notepad9').style.visibility = 'visible';
-    document.getElementById('notepad9').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Positioning") {
     document.getElementById('notepad10').style.visibility = 'visible';
-    document.getElementById('notepad10').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Overall raid awareness") {
     document.getElementById('notepad11').style.visibility = 'visible';
-    document.getElementById('notepad11').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Warden: Fletcherflies uptimes") {
     document.getElementById('notepad12').style.visibility = 'visible';
-    document.getElementById('notepad12').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Templar: Minor Sorcery uptime") {
     document.getElementById('notepad13').style.visibility = 'visible';
-    document.getElementById('notepad13').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
   else if(sectionTitle == "Necro: Empowering Grasp uptime") {
     document.getElementById('notepad14').style.visibility = 'visible';
-    document.getElementById('notepad14').innerHTML += '<div class="notepadNotes"><label>'+sectionTitle+':</label><br/><input style="width: 70%; height: 70%;" /></div>';
   }
-
 }
 
 function closeNotepad(notepadID) {
