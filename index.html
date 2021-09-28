@@ -63,7 +63,7 @@
           <th>Points Earned</th>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Proper RO usage & uptime</a></label></td>
+          <td><label><a  class="notes" id='link1' onclick="showNotepad(this)">Proper RO usage & uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score1', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -73,7 +73,7 @@
           <td><div id='score1'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" onclick="showNotepad(this)">MK/Zen's usage & uptime</a></label></td>
+          <td><label><a  class="notes" id='link2' onclick="showNotepad(this)">MK/Zen's usage & uptime</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score2', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -83,7 +83,7 @@
           <td><div id='score2'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Elemental Drain uptime</a></label></td>
+          <td><label><a  class="notes" id='link3' onclick="showNotepad(this)">Elemental Drain uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score3', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -93,7 +93,7 @@
           <td><div id='score3'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" onclick="showNotepad(this)">Apporpriate Ultimate usage</a></label></td>
+          <td><label><a  class="notes" id='link4' onclick="showNotepad(this)">Apporpriate Ultimate usage</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score4', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -103,7 +103,7 @@
           <td><div id='score4'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Combat Prayer usage & uptime</a></label></td>
+          <td><label><a  class="notes" id='link5' onclick="showNotepad(this)">Combat Prayer usage & uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score5', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -113,7 +113,7 @@
           <td><div id='score5'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" onclick="showNotepad(this)">Olorime Placement</a></label></td>
+          <td><label><a  class="notes" id='link6' onclick="showNotepad(this)">Olorime Placement</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score6', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -123,7 +123,7 @@
           <td><div id='score6'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">SPC uptime</a></label></td>
+          <td><label><a  class="notes" id='link7' onclick="showNotepad(this)">SPC uptime</a></label></td>
           <td><select onchange="updatePoints(this, 'score7', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -133,7 +133,7 @@
           <td><div id='score7'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" onclick="showNotepad(this)">Adds debuffed</a></label></td>
+          <td><label><a  class="notes" id='link8' onclick="showNotepad(this)">Adds debuffed</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score8', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -143,7 +143,7 @@
           <td><div id='score8'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Callouts, including Warhorns</a></label></td>
+          <td><label><a  class="notes" id='link9' onclick="showNotepad(this)">Callouts, including Warhorns</a></label></td>
           <td><select onchange="updatePoints(this, 'score9', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -153,7 +153,7 @@
           <td><div id='score9'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" onclick="showNotepad(this)">Positioning</a></label></td>
+          <td><label><a  class="notes" id='link10' onclick="showNotepad(this)">Positioning</a></label></td>
           <td><select class="lightRow" onchange="updatePoints(this, 'score10', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -163,7 +163,7 @@
           <td><div id='score10'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Overall raid awareness</a></label></td>
+          <td><label><a  class="notes" id='link11' onclick="showNotepad(this)">Overall raid awareness</a></label></td>
           <td><select onchange="updatePoints(this, 'score11', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -182,34 +182,34 @@
           <th>Points Earned</th>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Warden: Fletcherflies uptimes</a></label></td>
-          <td><select onchange="updatePoints(this, 'classScore1', 20)">
+          <td><label><a  class="notes" id='link12' onclick="showNotepad(this)">Warden: Fletcherflies uptimes</a></label></td>
+          <td><select onchange="updatePoints(this, 'score12', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='classScore1'></div></td>
+          <td><div id='score12'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" onclick="showNotepad(this)">Templar: Minor Sorcery uptime</a></label></td>
-          <td><select class="lightRow" onchange="updatePoints(this, 'classScore2', 20)">
+          <td><label><a  class="notes" id='link13' onclick="showNotepad(this)">Templar: Minor Sorcery uptime</a></label></td>
+          <td><select class="lightRow" onchange="updatePoints(this, 'score13', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='classScore2'></div></td>
+          <td><div id='score13'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" onclick="showNotepad(this)">Necro: Empowering Grasp uptime</a></label></td>
-          <td><select onchange="updatePoints(this, 'classScore3', 20)">
+          <td><label><a  class="notes" id='link14' onclick="showNotepad(this)">Necro: Empowering Grasp uptime</a></label></td>
+          <td><select onchange="updatePoints(this, 'score14', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='classScore3'></div></td>
+          <td><div id='score14'></div></td>
         </tr>
       </table>
     </div>
@@ -243,59 +243,59 @@
     </div>
   </div>
   <div id="notepad1" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad1')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('1')">&times;</span>
     <div class="notepadNotes"><label>Proper RO usage & uptime:</label><br/><textarea id="notes1" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad2" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad2')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('2')">&times;</span>
     <div class="notepadNotes"><label>MK/Zen's usage & uptime:</label><br/><textarea id="notes2" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad3" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad3')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('3')">&times;</span>
     <div class="notepadNotes"><label>Elemental Drain uptime:</label><br/><textarea id="notes3" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad4" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad4')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('4')">&times;</span>
     <div class="notepadNotes"><label>Apporpriate Ultimate usage:</label><br/><textarea id="notes4" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad5" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad5')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('5')">&times;</span>
     <div class="notepadNotes"><label>Combat Prayer usage & uptime:</label><br/><textarea id="notes5" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad6" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad6')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('6')">&times;</span>
     <div class="notepadNotes"><label>Olorime Placement:</label><br/><textarea id="notes6" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad7" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad7')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('7')">&times;</span>
     <div class="notepadNotes"><label>SPC uptime:</label><br/><textarea id="notes7" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad8" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad8')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('8')">&times;</span>
     <div class="notepadNotes"><label>Adds debuffed:</label><br/><textarea id="notes8" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad9" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad9')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('9')">&times;</span>
     <div class="notepadNotes"><label>Callouts, including Warhorns:</label><br/><textarea id="notes9" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad10" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad10')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('10')">&times;</span>
     <div class="notepadNotes"><label>Positioning:</label><br/><textarea id="notes10" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad11" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad11')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('11')">&times;</span>
     <div class="notepadNotes"><label>Overall raid awareness:</label><br/><textarea id="notes11" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad12" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad12')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('12')">&times;</span>
     <div class="notepadNotes"><label>Warden: Fletcherflies uptimes:</label><br/><textarea id="notes12" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad13" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad13')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('13')">&times;</span>
     <div class="notepadNotes"><label>Templar: Minor Sorcery uptime:</label><br/><textarea id="notes13" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad14" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('notepad14')">&times;</span>
+    <span class="closeNotepad" onclick="closeNotepad('14')">&times;</span>
     <div class="notepadNotes"><label>Necro: Empowering Grasp uptime:</label><br/><textarea id="notes14" rows="25" cols="40"></textarea></div>
   </div>
 </body>

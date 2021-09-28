@@ -18,24 +18,19 @@ function updatePoints(selectObject, scoreID, points) {
   updateScore()
 }
 function updateScore() {
-  //add upper score
-  var upperScore = 0;
+  var totalScore = 0;
   var possiblePoints = 0;
-  for (let i = 1; i < 12; i++) {
+  for (let i = 1; i < 15; i++) {
     if(!isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
-      upperScore = parseInt(upperScore) + parseInt(document.getElementById('score' + i).innerHTML);
+      totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
+      if (i<12){
       possiblePoints += 10;
+      }
+      else {
+        possiblePoints += 20;
+      }
     }
   }
-  //add lower score
-  var lowerScore = 0;
-  for (let i = 1; i < 4; i++) {
-    if(!isNaN(parseInt(document.getElementById('classScore' + i).innerHTML))) {
-      lowerScore = parseInt(lowerScore) + parseInt(document.getElementById('classScore' + i).innerHTML);
-      possiblePoints += 20;
-    }
-  }
-  var totalScore = parseInt(upperScore) + parseInt(lowerScore);
   document.getElementById('scoreEarned').innerHTML = totalScore;
   document.getElementById('possiblePoints').innerHTML = possiblePoints;
   document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
@@ -98,5 +93,8 @@ function showNotepad(selectObject) {
 }
 
 function closeNotepad(notepadID) {
-  document.getElementById(notepadID).style.visibility = 'hidden';
+  document.getElementById("notepad" + notepadID).style.visibility = 'hidden';
+  if(!document.getElementById("notes" + notepadID).innerText == "") {
+    document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML += " *";
+  }
 }
