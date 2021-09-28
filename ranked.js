@@ -61,3 +61,16 @@ function closeNotepad(notepadID) {
     }
   }
 }
+
+function pageInit() {
+  for (let i = 1; i < 15; i++) {
+    document.getElementById('notes' + i).addEventListener('keypress', function (e) {
+      // var key = e.which || e.keyCode;
+      // if (key === 13) {
+          console.log("HI! you pressed " + e.key)
+      if (e.key === 'Enter') {
+          closeNotepad(i);
+      }
+  });
+  }
+}
