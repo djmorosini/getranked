@@ -55,7 +55,7 @@ function closeNotepad(notepadID) {
     if(!document.getElementById("notes" + notepadID).value == "" && !document.getElementById("link" + notepadID).innerHTML.includes("*")) {
       document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML += "*";
     } else {
-      if(document.getElementById("link" + notepadID).innerHTML.includes("*")) {
+      if(document.getElementById("link" + notepadID).innerHTML.includes("*") && document.getElementById("notes" + notepadID).value == "") {
         document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML.slice(0,-1);
       }
     }
