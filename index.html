@@ -18,6 +18,9 @@
       background-color: #A98BC8;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
     }
+    .innerAllNotes {
+      margin: 5px;
+    }
     textarea {
       background-color: #D3BAEC;
     }
@@ -244,8 +247,8 @@
         </tr>
       </table>
     </div>
+    <button onclick="showAllNotes()">Show All Notes</button>
   </div>
-  <button onclick="showAllNotes()">Show All Notes</button>
   <div id="notepad1" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('1')">&times;</span>
     <div class="notepadNotes"><label>Proper RO usage & uptime:</label><br/><textarea id="notes1" rows="25" cols="40"></textarea></div>
