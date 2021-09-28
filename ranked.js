@@ -49,7 +49,7 @@ function showNotepad(notepadID) {
 
 function closeNotepad(notepadID) {
   if(notepadID == "allNotes") {
-    document.getElementById(notepadID).style.visibility = 'visible';
+    document.getElementById(notepadID).style.visibility = 'hidden';
   } else {
     document.getElementById("notepad" + notepadID).style.visibility = 'hidden';
     if(!document.getElementById("notes" + notepadID).value == "" && !document.getElementById("link" + notepadID).innerHTML.includes("*")) {
