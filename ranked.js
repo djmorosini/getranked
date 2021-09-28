@@ -94,7 +94,7 @@ function showNotepad(selectObject) {
 
 function closeNotepad(notepadID) {
   document.getElementById("notepad" + notepadID).style.visibility = 'hidden';
-  if(!document.getElementById("notes" + notepadID).innerText == "") {
+  if(!document.getElementById("notes" + notepadID).value == "") {
     document.getElementById("link" + notepadID).value = document.getElementById("link" + notepadID).value += " *";
   }
 }
