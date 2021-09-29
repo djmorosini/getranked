@@ -5,9 +5,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Get Ranked!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" type="text/css" media="screen" href="ranked.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="ranked.css" />
   <script src="ranked.js"></script>
   <style>
     .notepadNotes {
@@ -31,7 +30,7 @@
       background-color: #D3BAEC;
     }
     button {
-      color: inherit;
+      background-color: #A98BC8;
     }
   </style>
 </head>
@@ -255,7 +254,7 @@
     </div>
     <br/>
     <button style="float: left; clear:both;" onclick="showAllNotes()">Show All Notes</button>
-    <button style="float: left; clear:both;" onclick="window.print();">Save or Print?</button>
+    <button style="float: left;" onclick="window.print();">Save or Print?</button>
   </div>
   <div id="notepad1" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('1')">&times;</span>
