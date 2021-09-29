@@ -70,7 +70,7 @@ function showAllNotes() {
     if(!document.getElementById("notes" + i).value == "") {
       var title = document.getElementById('link' + i).innerHTML;
       var notes = document.getElementById('notes' + i).value;
-      document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div class='innerAllNotes'><label>"+title+": </label><br/><textarea cols='40' style='width:90%;'>"+notes+"</textarea></div>";
+      document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div class='innerAllNotes'><label>"+title+": </label><br/><span class='input' role='textbox' contenteditable style='width:90%;'>"+notes+"</span></div>";
     }
   }
 }
