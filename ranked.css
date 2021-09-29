@@ -21,11 +21,6 @@ body {
   color: white;
 }
 
-.input {
-  border: 1px solid black;
-  background-color: #A98BC8;
-}
-
 select {
   background-color: #D3BAEC;
   text-align: center;
