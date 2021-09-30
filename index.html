@@ -39,7 +39,7 @@
 
 <body>
   <div id='page-wrap'>
-    <div class='title' style="font-size:14px;">Valhalla Healer POV Ranking Scorecard</div>
+    <div class='title' style="font-size:14px;">Valhalla <select id="roleSelect"><option onchange="changeRole()" selected="selected">Healer</option><option>Tank</option></select> POV Ranking Scorecard</div>
     <div id='header-wrap'>
       <label>Player PSN: </label><input id='psn'></input>
       <br/>
@@ -187,7 +187,7 @@
         </tr>
         <tr class="lightRow">
           <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link14' onclick="showNotepad('14')"></a></td>
-          <td><select id="drop14" onchange="updatePoints(this, 'score14', 10)">
+          <td><select id="drop14" class="lightRow" onchange="updatePoints(this, 'score14', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
@@ -205,7 +205,7 @@
           <th>Points Earned</th>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link12' onclick="showNotepad('12')">Warden: Fletcherflies uptimes</a></label></td>
+          <td><label><a class="notes" id='link12' onclick="showNotepad('12')">Fletcherflies uptimes</a></label></td>
           <td><select id="drop12" onchange="updatePoints(this, 'score12', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>

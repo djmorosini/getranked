@@ -79,6 +79,10 @@ function showAllNotes() {
   }
 }
 
+function changeRole() {
+  
+}
+
 function classChanged() {
   var characterClass = document.getElementById("classSelect").value;
   if(characterClass == "Dragonknight") {

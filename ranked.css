@@ -4,6 +4,13 @@ body {
   font-size: 10px;
 }
 
+#roleSelect {
+  background-color: #54178A;
+  color: white;
+  border: none;
+  -webkit-appearance: none;
+}
+
 .closeNotepad {
   font-size: 1.5em;
   cursor: pointer;
