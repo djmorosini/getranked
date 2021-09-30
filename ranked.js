@@ -19,7 +19,7 @@ function updatePoints(selectObject, scoreID, points) {
 function updateScore() {
   var totalScore = 0;
   var possiblePoints = 0;
-  for (let i = 1; i < 14; i++) {
+  for (let i = 1; i < 15; i++) {
     if(!isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
       totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
       if (i<12){
@@ -44,7 +44,11 @@ function updateScore() {
 }
 
 function showNotepad(notepadID) {
-  document.getElementById('notepad' + notepadID).style.visibility = 'visible';
+  if(!document.getElementById("link" + notepadID).value == "") {
+    document.getElementById('notepad' + notepadID).style.visibility = 'visible';
+    document.getElementById("label"+ notepadID).innerHTML = document.getElementById("link" + notepadID).value;
+    document.getElementById("notes" + notepadID).focus();
+  }
 }
 
 function closeNotepad(notepadID) {
@@ -66,7 +70,7 @@ function showAllNotes() {
   document.getElementById('allNotes').style.visibility = 'visible';
   document.getElementById('allNotes').innerHTML = ""
   document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += '<span class="closeNotepad" style="position: fixed; color: white;" onclick="closeNotepad(\'allNotes\')">&times;</span>';
-  for (let i = 1; i < 14; i++) {
+  for (let i = 1; i < 15; i++) {
     if(!document.getElementById("notes" + i).value == "") {
       var title = document.getElementById('link' + i).innerHTML;
       var notes = document.getElementById('notes' + i).value;
@@ -99,7 +103,7 @@ function classChanged() {
 }
 
 function pageInit() {
-  for (let i = 1; i < 14; i++) {
+  for (let i = 1; i < 15; i++) {
     document.getElementById('notes' + i).addEventListener('focusout', function (e) {
       closeNotepad(i);
   });

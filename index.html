@@ -185,6 +185,16 @@
           </select></td>
           <td><div id='score11'></div></td>
         </tr>
+        <tr class="lightRow">
+          <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link14' onclick="showNotepad('14')"></a></td>
+          <td><select id="drop14" onchange="updatePoints(this, 'score14', 10)">
+            <option value="">Select</option>
+            <option style="color: green;" value='Pass'>Pass</option>
+            <option style="color: red;" value='Needs Work'>Needs Work</option>
+            <option value='N/A'>N/A</option>
+          </select></td>
+          <td><div id='score14'></div></td>
+        </tr>
       </table>
     </div>
     <div id='class-specific'>
@@ -205,7 +215,7 @@
           <td><div id='score12'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link13' onclick="showNotepad('13')">New</a></td>
+          <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link13' onclick="showNotepad('13')"></a></td>
           <td><select id="drop13" class="lightRow" onchange="updatePoints(this, 'score13', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -250,55 +260,59 @@
   </div>
   <div id="notepad1" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('1')">&times;</span>
-    <div class="notepadNotes"><label>Proper RO usage & uptime:</label><br/><textarea id="notes1" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label1"></label><br/><textarea id="notes1" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad2" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('2')">&times;</span>
-    <div class="notepadNotes"><label>MK/Zen's usage & uptime:</label><br/><textarea id="notes2" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label2"></label><br/><textarea id="notes2" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad3" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('3')">&times;</span>
-    <div class="notepadNotes"><label>Elemental Drain uptime:</label><br/><textarea id="notes3" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label3"></label><br/><textarea id="notes3" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad4" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('4')">&times;</span>
-    <div class="notepadNotes"><label>Apporpriate Ultimate usage:</label><br/><textarea id="notes4" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label4"></label><br/><textarea id="notes4" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad5" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('5')">&times;</span>
-    <div class="notepadNotes"><label>Combat Prayer usage & uptime:</label><br/><textarea id="notes5" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label5"></label><br/><textarea id="notes5" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad6" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('6')">&times;</span>
-    <div class="notepadNotes"><label>Olorime Placement:</label><br/><textarea id="notes6" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label6"></label><br/><textarea id="notes6" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad7" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('7')">&times;</span>
-    <div class="notepadNotes"><label>SPC uptime:</label><br/><textarea id="notes7" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label7"></label><br/><textarea id="notes7" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad8" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('8')">&times;</span>
-    <div class="notepadNotes"><label>Adds debuffed:</label><br/><textarea id="notes8" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label8"></label><br/><textarea id="notes8" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad9" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('9')">&times;</span>
-    <div class="notepadNotes"><label>Callouts, including Warhorns:</label><br/><textarea id="notes9" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label9"></label><br/><textarea id="notes9" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad10" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('10')">&times;</span>
-    <div class="notepadNotes"><label>Positioning:</label><br/><textarea id="notes10" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label10"></label><br/><textarea id="notes10" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad11" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('11')">&times;</span>
-    <div class="notepadNotes"><label>Overall raid awareness:</label><br/><textarea id="notes11" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label11"></label><br/><textarea id="notes11" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad12" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('12')">&times;</span>
-    <div class="notepadNotes"><label>Warden: Fletcherflies uptimes:</label><br/><textarea id="notes12" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label12"></label><br/><textarea id="notes12" rows="25" cols="40"></textarea></div>
   </div>
   <div id="notepad13" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('13')">&times;</span>
-    <div class="notepadNotes"><label>Templar: Minor Sorcery uptime:</label><br/><textarea id="notes13" rows="25" cols="40"></textarea></div>
+    <div class="notepadNotes"><label id="label13"></label><br/><textarea id="notes13" rows="25" cols="40"></textarea></div>
+  </div>
+  <div id="notepad14" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
+    <span class="closeNotepad" onclick="closeNotepad('14')">&times;</span>
+    <div class="notepadNotes"><label id="label14"></label><br/><textarea id="notes14" rows="25" cols="40"></textarea></div>
   </div>
   <div id="allNotes" class="notepad" style="display: flex; flex-direction: column; position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
   </div>
