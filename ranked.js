@@ -46,7 +46,7 @@ function updateScore() {
 function showNotepad(notepadID) {
   if(!document.getElementById("link" + notepadID).innerHTML == "") {
     document.getElementById('notepad' + notepadID).style.visibility = 'visible';
-    document.getElementById("label"+ notepadID).innerHTML = document.getElementById("link" + notepadID).value;
+    document.getElementById("label"+ notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML;
     document.getElementById("notes" + notepadID).focus();
   }
 }
