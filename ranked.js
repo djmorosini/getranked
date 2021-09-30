@@ -19,7 +19,7 @@ function updatePoints(selectObject, scoreID, points) {
 function updateScore() {
   var totalScore = 0;
   var possiblePoints = 0;
-  for (let i = 1; i < 15; i++) {
+  for (let i = 1; i < 14; i++) {
     if(!isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
       totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
       if (i<12){
@@ -66,7 +66,7 @@ function showAllNotes() {
   document.getElementById('allNotes').style.visibility = 'visible';
   document.getElementById('allNotes').innerHTML = ""
   document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += '<span class="closeNotepad" style="position: fixed; color: white;" onclick="closeNotepad(\'allNotes\')">&times;</span>';
-  for (let i = 1; i < 15; i++) {
+  for (let i = 1; i < 14; i++) {
     if(!document.getElementById("notes" + i).value == "") {
       var title = document.getElementById('link' + i).innerHTML;
       var notes = document.getElementById('notes' + i).value;
@@ -75,8 +75,31 @@ function showAllNotes() {
   }
 }
 
+function classChanged() {
+  var characterClass = document.getElementById("classSelect").value;
+  if(characterClass == "Dragonknight") {
+    document.getElementById("link12").innerHTML = "You did DK healer stuff";
+    document.getElementById("notes12").value = "";
+  } else if (characterClass == "Necromancer") {
+    document.getElementById("link12").innerHTML = "Empowering Grasp uptime";
+    document.getElementById("notes12").value = "";
+  } else if (characterClass == "Nightblade") {
+    document.getElementById("link12").innerHTML = "You did NB healer stuff";
+    document.getElementById("notes12").value = "";
+  } else if (characterClass == "Sorcerer") {
+    document.getElementById("link12").innerHTML = "You did Sorc healer stuff";
+    document.getElementById("notes12").value = "";
+  } else if (characterClass == "Templar") {
+    document.getElementById("link12").innerHTML = "Minor Sorcery uptime";
+    document.getElementById("notes12").value = "";
+  } else if (characterClass == "Warden") {
+    document.getElementById("link12").innerHTML = "Fletcherflies uptimes";
+    document.getElementById("notes12").value = "";
+  }
+}
+
 function pageInit() {
-  for (let i = 1; i < 15; i++) {
+  for (let i = 1; i < 14; i++) {
     document.getElementById('notes' + i).addEventListener('focusout', function (e) {
       closeNotepad(i);
   });

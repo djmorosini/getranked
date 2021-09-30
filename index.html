@@ -44,7 +44,7 @@
       <label>Player PSN: </label><input id='psn'></input>
       <br/>
       <label>Class/Content Submitted:</label>
-      <select>
+      <select id="classSelect" onchange="classChanged()">
         <option>Dragonknight</option>
         <option>Necromancer</option>
         <option>Nightblade</option>
@@ -205,7 +205,7 @@
           <td><div id='score12'></div></td>
         </tr>
         <tr class="lightRow">
-          <td><label><a class="notes" id='link13' onclick="showNotepad('13')">Templar: Minor Sorcery uptime</a></label></td>
+          <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link13' onclick="showNotepad('13')">New</a></td>
           <td><select id="drop13" class="lightRow" onchange="updatePoints(this, 'score13', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -213,16 +213,6 @@
             <option value='N/A'>N/A</option>
           </select></td>
           <td><div id='score13'></div></td>
-        </tr>
-        <tr>
-          <td><label><a class="notes" id='link14' onclick="showNotepad('14')">Necro: Empowering Grasp uptime</a></label></td>
-          <td><select id="drop14" onchange="updatePoints(this, 'score14', 20)">
-            <option value="">Select</option>
-            <option style="color: green;" value='Pass'>Pass</option>
-            <option style="color: red;" value='Needs Work'>Needs Work</option>
-            <option value='N/A'>N/A</option>
-          </select></td>
-          <td><div id='score14'></div></td>
         </tr>
       </table>
     </div>
@@ -309,10 +299,6 @@
   <div id="notepad13" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('13')">&times;</span>
     <div class="notepadNotes"><label>Templar: Minor Sorcery uptime:</label><br/><textarea id="notes13" rows="25" cols="40"></textarea></div>
-  </div>
-  <div id="notepad14" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
-    <span class="closeNotepad" onclick="closeNotepad('14')">&times;</span>
-    <div class="notepadNotes"><label>Necro: Empowering Grasp uptime:</label><br/><textarea id="notes14" rows="25" cols="40"></textarea></div>
   </div>
   <div id="allNotes" class="notepad" style="display: flex; flex-direction: column; position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
   </div>
