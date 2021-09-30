@@ -13,17 +13,17 @@ function updatePoints(selectObject, scoreID, points) {
     document.getElementById(scoreID).style.color = 'black';
     selectObject.style.color = 'black'
   }
-  updateScore()
+  updateScore(selectObject)
 }
 
-function updateScore() {
+function updateScore(selectObject) {
   var totalScore = 0;
   var possiblePoints = 0;
   for (let i = 1; i < 15; i++) {
     if(!isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
       totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
-      if (i<12){
-      possiblePoints += 10;
+      if(!selectObject.class == "lwcls") {
+        possiblePoints += 10;
       } else {
         possiblePoints += 20;
       }
