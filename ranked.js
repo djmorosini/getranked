@@ -22,7 +22,7 @@ function updateScore(selectObject) {
   for (let i = 1; i < 15; i++) {
     if(!isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
       totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
-      if(!selectObject.class == "lwcls") {
+      if(!selectObject.classList.contains("lwcls")) {
         possiblePoints += 10;
       } else {
         possiblePoints += 20;
