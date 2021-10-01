@@ -13,22 +13,22 @@ function updatePoints(selectObject, scoreID, points) {
     document.getElementById(scoreID).style.color = 'black';
     selectObject.style.color = 'black'
   }
-  updateScore(selectObject)
+  updateScore();
 }
 
-function updateScore(selectObject) {
+function updateScore() {
   var totalScore = 0;
   var possiblePoints = 0;
   for (let i = 1; i < 15; i++) {
-    if(!isNaN(parseInt(document.getElementById('score' + i).innerHTML))) {
-      totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
-      if(!selectObject.classList.contains("lwcls")) {
-        possiblePoints += 10;
-      } else {
-        possiblePoints += 20;
-      }
+  if(!isNaN(parseInt(document.getElementById("score" + i).innerHTML))) {
+    totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
+    if(!document.getElementById("drop" + i).classList.contains("lwcls")) {
+      possiblePoints = parseInt(possiblePoints) + 10;
+    } else {
+      possiblePoints = parseInt(possiblePoints) + 20;
     }
   }
+}
   document.getElementById('scoreEarned').innerHTML = totalScore;
   document.getElementById('possiblePoints').innerHTML = possiblePoints;
   document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';

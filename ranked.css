@@ -9,6 +9,8 @@ body {
   color: white;
   border: none;
   -webkit-appearance: none;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .closeNotepad {
