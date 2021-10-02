@@ -102,7 +102,13 @@ function changeRole() {
 }
 
 function setColors(roleSelected) {
-
+  if(roleSelected == "Healer") {
+    document.body.style.backgroundColor = "#54178A";
+  } else if (roleSelected == "Tank") {
+    document.body.style.backgroundColor = "darkblue";
+  } else if (roleSelected == "DPS") {
+    document.body.style.backgroundColor = "black";
+  }
 }
 
 function classChanged() {
