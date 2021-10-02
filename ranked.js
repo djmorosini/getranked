@@ -80,6 +80,28 @@ function showAllNotes() {
 }
 
 function changeRole() {
+  var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Overall raid awareness", "Proper RO usage & uptime", "MK/Zen's usage & uptime", "Olorime Placement", "SPC uptime"];
+  var tankList = ["Elemental Drain uptime", "Tank skills usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Overall raid awareness", "PA uptime", "Galenwe uptime", "Olorime Placement", "Breach uptime"];
+  var dpsList = ["Rotation uptimes", "Certain amount of deaths", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts", "Positioning", "Overall raid awareness", "EC usage & uptime", "MK usage & uptime", "Zen's usage & uptime", "MA usage & uptime"];
+  if(document.getElementById("").value == "Healer") {
+    for (let i = 0; i < 11; i++) {
+      document.getElementById("link" + (i+1)).innerHTML = healerList[i];
+      setColors("Healer");
+    }
+  } else if (document.getElementById("").value == "Tank") {
+    for (let i = 0; i < 11; i++) {
+      document.getElementById("link" + (i+1)).innerHTML = tankList[i];
+      setColors("Tank");
+    }
+  } else if (document.getElementById("").value == "DPS") {
+    for (let i = 0; i < 11; i++) {
+      document.getElementById("link" + (i+1)).innerHTML = dpsList[i];
+      setColors("DPS");
+    }
+  }
+}
+
+function setColors(roleSelected) {
 
 }
 
