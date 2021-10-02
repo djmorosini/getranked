@@ -13,6 +13,63 @@ body {
   font-weight: bold;
 }
 
+table {
+  border-collapse: collapse;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+  background-color:#D3BAEC;
+}
+
+select {
+  background-color: #D3BAEC;
+  text-align: center;
+}
+
+input {
+  background-color: #D3BAEC;
+}
+
+textarea {
+  background-color: #D3BAEC;
+}
+
+.innerAllNotes {
+  margin: 4px;
+  height: auto;
+  border: 1px solid black;
+  background-color: #D3BAEC;
+  display: block;
+  overflow: auto;
+  padding: 2px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+button {
+  background-color: #A98BC8;
+}
+
+.lightRow {
+  background-color: #A98BC8 !important;
+}
+
+.notepad {
+  background-color: #A98BC8;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+}
+
+th {
+  background-color: #8649C3;
+  color: white;
+  padding: 3px !important;
+}
+
+.notepadNotes {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
 .closeNotepad {
   font-size: 1.5em;
   cursor: pointer;
@@ -28,15 +85,6 @@ body {
 
 #header-wrap {
   color: white;
-}
-
-select {
-  background-color: #D3BAEC;
-  text-align: center;
-}
-
-input {
-  background-color: #D3BAEC;
 }
 
 label a {
@@ -68,24 +116,6 @@ label a:active {
   font-weight: bold;
   color:white;
   text-align: center;
-}
-
-.lightRow {
-  background-color: #A98BC8 !important;
-}
-
-table {
-  border-collapse: collapse;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  text-align: center;
-  background-color:#D3BAEC;
-}
-
-th {
-  background-color: #8649C3;
-  color: white;
-  padding: 3px !important;
 }
 
 .fullP {
