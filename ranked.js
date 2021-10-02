@@ -86,27 +86,31 @@ function changeRole() {
 function classChanged() {
   var characterClass = document.getElementById("classSelect").value;
   if(characterClass == "Dragonknight") {
-    document.getElementById("link12").innerHTML = "You did DK healer stuff";
-    document.getElementById("notes12").value = "";
+    document.getElementById("link13").innerHTML = "You did DK healer stuff";
+    document.getElementById("notes13").value = "";
   } else if (characterClass == "Necromancer") {
-    document.getElementById("link12").innerHTML = "Empowering Grasp uptime";
-    document.getElementById("notes12").value = "";
+    document.getElementById("link13").innerHTML = "Empowering Grasp uptime";
+    document.getElementById("notes13").value = "";
   } else if (characterClass == "Nightblade") {
-    document.getElementById("link12").innerHTML = "You did NB healer stuff";
-    document.getElementById("notes12").value = "";
+    document.getElementById("link13").innerHTML = "You did NB healer stuff";
+    document.getElementById("notes13").value = "";
   } else if (characterClass == "Sorcerer") {
-    document.getElementById("link12").innerHTML = "You did Sorc healer stuff";
-    document.getElementById("notes12").value = "";
+    document.getElementById("link13").innerHTML = "You did Sorc healer stuff";
+    document.getElementById("notes13").value = "";
   } else if (characterClass == "Templar") {
-    document.getElementById("link12").innerHTML = "Minor Sorcery uptime";
-    document.getElementById("notes12").value = "";
+    document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
+    document.getElementById("notes13").value = "";
   } else if (characterClass == "Warden") {
-    document.getElementById("link12").innerHTML = "Fletcherflies uptimes";
-    document.getElementById("notes12").value = "";
+    document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
+    document.getElementById("notes13").value = "";
   }
 }
 
 function pageInit() {
+  var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Overall raid awareness", "Proper RO usage & uptime", "MK/Zen's usage & uptime", "Olorime Placement", "SPC uptime"];
+  for (let i = 0; i < 11; i++) {
+    document.getElementById("link" + (i+1)).innerHTML = healerList[i];
+  }
   for (let i = 1; i < 15; i++) {
     document.getElementById('notes' + i).addEventListener('focusout', function (e) {
       closeNotepad(i);
