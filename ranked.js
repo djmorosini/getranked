@@ -89,15 +89,15 @@ function changeRole() {
   var tankGear = ["PA uptime", "Galenwe uptime", "Olorime Placement", "Breach uptime"];
   var dpsGear = ["EC usage & uptime", "MK usage & uptime", "Zen's usage & uptime", "MA usage & uptime"];
   if (document.getElementById("roleSelect").value == "Healer") {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 7; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = healerList[i];
     }
   } else if (document.getElementById("roleSelect").value == "Tank") {
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 7; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = tankList[i];
     }
   } else if (document.getElementById("roleSelect").value == "DPS") {
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 7; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
   }
