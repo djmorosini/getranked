@@ -167,7 +167,7 @@
       <table id="table2" class='fullP bigTable'>
         <tr id="tableRow5" class="lightrow">
           <td><label><a class="notes" id='link10' onclick="showNotepad('10')">Gear</a></label></td>
-          <td><select class="lightrow lwcls" id="drop10" onchange="updatePoints(this, 'score10', 20)">
+          <td><select class="lightrow" id="drop10" onchange="updatePoints(this, 'score10', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
@@ -177,7 +177,7 @@
         </tr>
         <tr>
           <td><label><a class="notes" id='link11' onclick="showNotepad('11')">Gear 2</a></label></td>
-          <td><select class="lwcls" id="drop11" onchange="updatePoints(this, 'score11', 20)">
+          <td><select id="drop11" onchange="updatePoints(this, 'score11', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
