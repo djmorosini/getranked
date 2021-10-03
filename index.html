@@ -8,6 +8,12 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" media="all" href="ranked.css" />
   <script src="ranked.js"></script>
+  <style>
+    .boldScore {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -75,7 +81,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score1'></div></td>
+          <td><div class="boldScore" id='score1'></div></td>
         </tr>
         <tr id="tableRow1" class="lightRow">
           <td><label><a class="notes" id='link2' onclick="showNotepad('2')">MK/Zen's usage & uptime</a></label></td>
@@ -85,7 +91,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score2'></div></td>
+          <td><div class="boldScore" id='score2'></div></td>
         </tr>
         <tr>
           <td><label><a class="notes" id='link3' onclick="showNotepad('3')">Elemental Drain uptime</a></label></td>
@@ -95,7 +101,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score3'></div></td>
+          <td><div class="boldScore" id='score3'></div></td>
         </tr>
         <tr id="tableRow2" class="lightRow">
           <td><label><a class="notes" id='link4' onclick="showNotepad('4')">Apporpriate Ultimate usage</a></label></td>
@@ -105,7 +111,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score4'></div></td>
+          <td><div class="boldScore" id='score4'></div></td>
         </tr>
         <tr>
           <td><label><a class="notes" id='link5' onclick="showNotepad('5')">Combat Prayer usage & uptime</a></label></td>
@@ -115,7 +121,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score5'></div></td>
+          <td><div class="boldScore" id='score5'></div></td>
         </tr>
         <tr id="tableRow3" class="lightRow">
           <td><label><a class="notes" id='link6' onclick="showNotepad('6')">Olorime Placement</a></label></td>
@@ -125,7 +131,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score6'></div></td>
+          <td><div class="boldScore" id='score6'></div></td>
         </tr>
         <tr>
           <td><label><a class="notes" id='link7' onclick="showNotepad('7')">SPC uptime</a></label></td>
@@ -135,7 +141,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score7'></div></td>
+          <td><div class="boldScore" id='score7'></div></td>
         </tr>
         <tr id="tableRow4" class="lightRow">
           <td><label><a class="notes" id='link8' onclick="showNotepad('8')">Adds debuffed</a></label></td>
@@ -145,7 +151,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score8'></div></td>
+          <td><div class="boldScore" id='score8'></div></td>
         </tr>
         <tr>
           <td><label><a class="notes" id='link9' onclick="showNotepad('9')">Callouts, including Warhorns</a></label></td>
@@ -155,7 +161,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score9'></div></td>
+          <td><div class="boldScore" id='score9'></div></td>
         </tr>
         <tr id="tableRow5" class="lightRow">
           <td><label><a class="notes" id='link10' onclick="showNotepad('10')">Positioning</a></label></td>
@@ -165,7 +171,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score10'></div></td>
+          <td><div class="boldScore" id='score10'></div></td>
         </tr>
         <tr>
           <td><label><a class="notes" id='link11' onclick="showNotepad('11')">Overall raid awareness</a></label></td>
@@ -175,7 +181,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score11'></div></td>
+          <td><div class="boldScore" id='score11'></div></td>
         </tr>
         <tr id="tableRow6" class="lightRow">
           <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link12' onclick="showNotepad('12')"></a></td>
@@ -185,7 +191,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score12'></div></td>
+          <td><div class="boldScore" id='score12'></div></td>
         </tr>
       </table>
     </div>
@@ -204,7 +210,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score13'></div></td>
+          <td><div class="boldScore" id='score13'></div></td>
         </tr>
         <tr id="tableRow7" class="lightRow">
           <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link14' onclick="showNotepad('14')"></a></td>
@@ -214,7 +220,7 @@
             <option style="color: red;" value='Needs Work'>Needs Work</option>
             <option value='N/A'>N/A</option>
           </select></td>
-          <td><div id='score14'></div></td>
+          <td><div class="boldScore" id='score14'></div></td>
         </tr>
       </table>
     </div>
@@ -238,9 +244,9 @@
         </tr>
         <tr>
           <td><label>Grade</label></td>
-          <td><div id='grade' style='width: 100px;'></div></td>
+          <td><div class="boldScore" id='grade' style='width: 100px;'></div></td>
         </tr>
-        <tr id="tableRow10" class="lightRow">
+        <tr id="tableRow10" class="lightRow boldScore">
           <td><label>Rank Advanced?</label></td>
           <td><div id='rankAdvanced' style='width: 100px;'></div></td>
         </tr>
