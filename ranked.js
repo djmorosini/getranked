@@ -144,7 +144,7 @@ function actuallySetColors(background, header, row1, row2) {
 function setColors() {
   var role = document.getElementById("roleSelect").value;
   if (role == "Healer") {
-    actuallySetColors("#54178A", "#8649C3", "#D3BAEC", "#A98BC8");
+    actuallySetColors("#54178A", "#8649C3", "#A98BC8", "#D3BAEC");
   } else if (role == "Tank") {
     actuallySetColors("#0E1B44", "#2d448c", "#99ace8", "#7b94e0");
   } else if (role == "DPS") {
