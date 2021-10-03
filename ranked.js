@@ -118,7 +118,7 @@ function setColors(roleSelected) {
       }
     }
     for(let i = 1; i < 7; i++) {
-      document.getElementById("tableHead" + 1).style.backgroundColor = "#8649C3";
+      document.getElementById("tableHead" + i).style.backgroundColor = "#8649C3";
     }
   } else if (roleSelected == "Tank") {
     document.body.style.backgroundColor = "#0E1B44";
@@ -136,7 +136,7 @@ function setColors(roleSelected) {
       }
     }
     for(let i = 1; i < 7; i++) {
-      document.getElementById("tableHead" + 1).style.backgroundColor = "#2d448c";
+      document.getElementById("tableHead" + i).style.backgroundColor = "#2d448c";
     }
   } else if (roleSelected == "DPS") {
     document.body.style.backgroundColor = "#2a2a30";
@@ -154,7 +154,7 @@ function setColors(roleSelected) {
       }
     }
     for(let i = 1; i < 7; i++) {
-      document.getElementById("tableHead" + 1).style.backgroundColor = "#3c3c42";
+      document.getElementById("tableHead" + i).style.backgroundColor = "#3c3c42";
     }
   }
 }
