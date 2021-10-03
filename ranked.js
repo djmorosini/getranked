@@ -139,7 +139,7 @@ function setColors(roleSelected) {
       document.getElementById("tableHead" + 1).style.backgroundColor = "#2d448c";
     }
   } else if (roleSelected == "DPS") {
-    document.body.style.backgroundColor = "black";
+    document.body.style.backgroundColor = "#2a2a30";
     document.getElementById("roleSelect").style.backgroundColor = "#2a2a30";
     document.getElementById("bottomButton1").style.backgroundColor = "#6e6e73";
     document.getElementById("bottomButton2").style.backgroundColor = "#6e6e73";
