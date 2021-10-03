@@ -1,15 +1,16 @@
 function updatePoints(selectObject, scoreID, points) {
   var value = selectObject.value;
   if(value == "Pass") {
-    document.getElementById(scoreID).innerHTML = "<input style='color: green; text-align: center; border: none; -webkit-appearance: none;' TYPE='number' name='quantity' pattern='[0-9]+' MIN='5' MAX='10' VALUE='"+points+"' />";
+    document.getElementById(scoreID).innerHTML = points;
+    selectObject.style.color = 'green';
   } else if (value == "Needs Work") {
     document.getElementById(scoreID).innerHTML = 0;
     document.getElementById(scoreID).style.color = 'red';
-    selectObject.style.color = 'red'
+    selectObject.style.color = 'red';
   } else if (value == "N/A") {
     document.getElementById(scoreID).innerHTML = 'N/A';
     document.getElementById(scoreID).style.color = 'black';
-    selectObject.style.color = 'black'
+    selectObject.style.color = 'black';
   }
   updateScore();
 }
