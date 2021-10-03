@@ -132,7 +132,7 @@ function actuallySetColors(background, header, row1, row2) {
       document.getElementById("innerNote" + i).style.backgroundColor = row2;
     }
   }
-  for (let i = 1; i < 7; i++) {
+  for (let i = 1; i < 10; i++) {
     document.getElementById("tableHead" + i).style.backgroundColor = header;
   }
   for (let i = 1; i < 11; i++) {
