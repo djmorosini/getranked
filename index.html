@@ -74,7 +74,7 @@
           <th id="tableHead3">Points Earned</th>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link1' onclick="showNotepad('1')">Proper RO usage & uptime</a></label></td>
+          <td><label><a class="notes" id='link1' onclick="showNotepad('1')"></a></label></td>
           <td><select id="drop1" onchange="updatePoints(this, 'score1', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -84,7 +84,7 @@
           <td><div class="boldScore" id='score1'></div></td>
         </tr>
         <tr id="tableRow1" class="lightRow">
-          <td><label><a class="notes" id='link2' onclick="showNotepad('2')">MK/Zen's usage & uptime</a></label></td>
+          <td><label><a class="notes" id='link2' onclick="showNotepad('2')"></a></label></td>
           <td><select id="drop2" class="lightRow" onchange="updatePoints(this, 'score2', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -94,7 +94,7 @@
           <td><div class="boldScore" id='score2'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link3' onclick="showNotepad('3')">Elemental Drain uptime</a></label></td>
+          <td><label><a class="notes" id='link3' onclick="showNotepad('3')"></a></label></td>
           <td><select id="drop3" onchange="updatePoints(this, 'score3', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -104,7 +104,7 @@
           <td><div class="boldScore" id='score3'></div></td>
         </tr>
         <tr id="tableRow2" class="lightRow">
-          <td><label><a class="notes" id='link4' onclick="showNotepad('4')">Apporpriate Ultimate usage</a></label></td>
+          <td><label><a class="notes" id='link4' onclick="showNotepad('4')"></a></label></td>
           <td><select id="drop4" class="lightRow" onchange="updatePoints(this, 'score4', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -114,7 +114,7 @@
           <td><div class="boldScore" id='score4'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link5' onclick="showNotepad('5')">Combat Prayer usage & uptime</a></label></td>
+          <td><label><a class="notes" id='link5' onclick="showNotepad('5')"></a></label></td>
           <td><select id="drop5" onchange="updatePoints(this, 'score5', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -124,7 +124,7 @@
           <td><div class="boldScore" id='score5'></div></td>
         </tr>
         <tr id="tableRow3" class="lightRow">
-          <td><label><a class="notes" id='link6' onclick="showNotepad('6')">Olorime Placement</a></label></td>
+          <td><label><a class="notes" id='link6' onclick="showNotepad('6')"></a></label></td>
           <td><select id="drop6" class="lightRow" onchange="updatePoints(this, 'score6', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -134,7 +134,7 @@
           <td><div class="boldScore" id='score6'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link7' onclick="showNotepad('7')">SPC uptime</a></label></td>
+          <td><label><a class="notes" id='link7' onclick="showNotepad('7')"></a></label></td>
           <td><select id="drop7" onchange="updatePoints(this, 'score7', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -144,7 +144,7 @@
           <td><div class="boldScore" id='score7'></div></td>
         </tr>
         <tr id="tableRow4" class="lightRow">
-          <td><label><a class="notes" id='link8' onclick="showNotepad('8')">Adds debuffed</a></label></td>
+          <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link8' onclick="showNotepad('8')"></a></label></td>
           <td><select id="drop8" class="lightRow" onchange="updatePoints(this, 'score8', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -154,7 +154,7 @@
           <td><div class="boldScore" id='score8'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link9' onclick="showNotepad('9')">Callouts, including Warhorns</a></label></td>
+          <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link9' onclick="showNotepad('9')"></a></td>
           <td><select id="drop9" onchange="updatePoints(this, 'score9', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -163,9 +163,11 @@
           </select></td>
           <td><div class="boldScore" id='score9'></div></td>
         </tr>
-        <tr id="tableRow5" class="lightRow">
-          <td><label><a class="notes" id='link10' onclick="showNotepad('10')">Positioning</a></label></td>
-          <td><select id="drop10" class="lightRow" onchange="updatePoints(this, 'score10', 10)">
+      </table>
+      <table id="table2" class='fullP bigTable'>
+        <tr id="tableRow5" class="lightrow">
+          <td><label><a class="notes" id='link10' onclick="showNotepad('10')">Gear</a></label></td>
+          <td><select class="lightrow lwcls" id="drop10" onchange="updatePoints(this, 'score10', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
@@ -174,8 +176,8 @@
           <td><div class="boldScore" id='score10'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link11' onclick="showNotepad('11')">Overall raid awareness</a></label></td>
-          <td><select id="drop11" onchange="updatePoints(this, 'score11', 10)">
+          <td><label><a class="notes" id='link11' onclick="showNotepad('11')">Gear 2</a></label></td>
+          <td><select class="lwcls" id="drop11" onchange="updatePoints(this, 'score11', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
@@ -185,7 +187,7 @@
         </tr>
         <tr id="tableRow6" class="lightRow">
           <td><a contenteditable style="display:inline-block; width:100%; height:100%;" class="notes" id='link12' onclick="showNotepad('12')"></a></td>
-          <td><select id="drop12" class="lightRow" onchange="updatePoints(this, 'score12', 10)">
+          <td><select id="drop12" class="lightRow lwcls" onchange="updatePoints(this, 'score12', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
             <option style="color: red;" value='Needs Work'>Needs Work</option>
@@ -196,7 +198,7 @@
       </table>
     </div>
     <div id='class-specific'>
-      <table id="table2" class='fullP smallTable'>
+      <table id="table3" class='fullP smallTable'>
         <tr>
           <th id="tableHead4">20 points each (class-specific)</th>
           <th id="tableHead5">Pass/Needs Work</th>
@@ -225,7 +227,7 @@
       </table>
     </div>
     <div id='scoring' style='width: 95%;'>
-      <table id="table3" class='halfPL' style='float:left; word-wrap: normal; width: 42%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
+      <table id="table4" class='halfPL' style='float:left; word-wrap: normal; width: 42%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
         <tr>
           <td><label>Total Points Possible is dependent on which items are applicaple</label></td>
         </tr>
@@ -233,7 +235,7 @@
           <td><label>A passing grade of 80% is required to advance rank.</label></td>
         </tr>
       </table>
-      <table id="table4" class='halfPR' style='float:right; width: 57%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
+      <table id="table5" class='halfPR' style='float:right; width: 57%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
         <tr>
           <td><label>Score Earned</label></td>
           <td><div id='scoreEarned' style='width: 100px;'></div></td>
@@ -246,9 +248,9 @@
           <td><label>Grade</label></td>
           <td><div class="boldScore" id='grade' style='width: 100px;'></div></td>
         </tr>
-        <tr id="tableRow10" class="lightRow boldScore">
+        <tr id="tableRow10" class="lightRow">
           <td><label>Rank Advanced?</label></td>
-          <td><div id='rankAdvanced' style='width: 100px;'></div></td>
+          <td><div id='rankAdvanced' class="boldScore" style='width: 100px;'></div></td>
         </tr>
       </table>
     </div>
