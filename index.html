@@ -20,7 +20,7 @@
   <div id='page-wrap'>
     <div class='title' style="font-size:14px;">Valhalla <select id="roleSelect" onchange="changeRole()"><option>DPS</option><option selected="selected">Healer</option><option>Tank</option></select> POV Ranking Scorecard</div>
     <div id='header-wrap'>
-      <label>Player PSN: </label><input id='psn'></input><select id="gear1">
+      <label>Player PSN: </label><input id='psn'></input><select id="gear1" onchange="setGearRows()">
         <option selected="selected">SPC</option>
         <option>VoO</option>
         <option>HT</option>
@@ -30,7 +30,7 @@
         <option>MK</option>
         <option>Oth</option>
       </select>
-      <select id="gear2">
+      <select id="gear2" onchange="setGearRows()">
         <option>SPC</option>
         <option>VoO</option>
         <option selected="selected">HT</option>
