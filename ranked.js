@@ -114,7 +114,8 @@ function setColors(roleSelected) {
       document.getElementById("table"+i).style.backgroundColor = "#D3BAEC";
     }
     for(let i = 1; i < 15; i++) {
-      document.getElementById("notes" + i).style.backgroundColor = "#A98BC8";
+      document.getElementById("notes" + i).style.backgroundColor = "#D3BAEC";
+      document.getElementById("notepad" + i).style.backgroundColor = "#A98BC8";
       if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#A98BC8";
       } else {
@@ -141,7 +142,8 @@ function setColors(roleSelected) {
       document.getElementById("table"+i).style.backgroundColor = "#99ace8";
     }
     for(let i = 1; i < 15; i++) {
-      document.getElementById("notes" + i).style.backgroundColor = "#7b94e0";
+      document.getElementById("notes" + i).style.backgroundColor = "#99ace8";
+      document.getElementById("notepad" + i).style.backgroundColor = "#7b94e0";
       if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#7b94e0";
       } else {
@@ -169,6 +171,7 @@ function setColors(roleSelected) {
     }
     for(let i = 1; i < 15; i++) {
       document.getElementById("notes" + i).style.backgroundColor = "#6e6e73";
+      document.getElementById("notepad" + i).style.backgroundColor = "#ababb3";
       if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#ababb3";
       } else {
