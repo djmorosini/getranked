@@ -2,6 +2,7 @@ function updatePoints(selectObject, scoreID, points) {
   var value = selectObject.value;
   if(value == "Pass") {
     document.getElementById(scoreID).innerHTML = points;
+    document.getElementById(scoreID).style.color = 'green';
     selectObject.style.color = 'green';
   } else if (value == "Needs Work") {
     document.getElementById(scoreID).innerHTML = 0;
