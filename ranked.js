@@ -105,6 +105,7 @@ function setColors(roleSelected) {
   if(roleSelected == "Healer") {
     document.body.style.backgroundColor = "#54178A";
     document.getElementById("roleSelect").style.backgroundColor = "#54178A";
+    document.getElementById("psn").style.backgroundColor = "#D3BAEC";
     document.getElementById("bottomButton1").style.backgroundColor = "#A98BC8";
     document.getElementById("bottomButton2").style.backgroundColor = "#A98BC8";
     for(let i = 1; i < 5; i++) {
@@ -126,6 +127,7 @@ function setColors(roleSelected) {
   } else if (roleSelected == "Tank") {
     document.body.style.backgroundColor = "#0E1B44";
     document.getElementById("roleSelect").style.backgroundColor = "#0E1B44";
+    document.getElementById("psn").style.backgroundColor = "#99ace8";
     document.getElementById("bottomButton1").style.backgroundColor = "#7b94e0";
     document.getElementById("bottomButton2").style.backgroundColor = "#7b94e0";
     for(let i = 1; i < 5; i++) {
@@ -146,7 +148,8 @@ function setColors(roleSelected) {
     }
   } else if (roleSelected == "DPS") {
     document.body.style.backgroundColor = "#0d0d0f";
-    document.getElementById("roleSelect").style.backgroundColor = "#2d2a36";
+    document.getElementById("roleSelect").style.backgroundColor = "#0d0d0f";
+    document.getElementById("psn").style.backgroundColor = "#6e6e73";
     document.getElementById("bottomButton1").style.backgroundColor = "#6e6e73";
     document.getElementById("bottomButton2").style.backgroundColor = "#6e6e73";
     for(let i = 1; i < 5; i++) {
