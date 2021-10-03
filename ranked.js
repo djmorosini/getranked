@@ -110,6 +110,9 @@ function actuallySetColors(background, header, row1, row2) {
     document.getElementById("allNotes").style.backgroundColor = row2;
     document.getElementById("bottomButton1").style.backgroundColor = row2;
     document.getElementById("bottomButton2").style.backgroundColor = row2;
+    document.getElementById("trialSelect").style.backgroundColor = row2;
+    document.getElementById("gear1").style.backgroundColor = row2;
+    document.getElementById("gear2").style.backgroundColor = row2;
     for(let i = 1; i < 5; i++) {
       document.getElementById("table"+i).style.backgroundColor = row1;
     }
