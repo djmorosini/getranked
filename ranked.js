@@ -111,7 +111,7 @@ function setColors(roleSelected) {
       document.getElementById("table"+i).style.backgroundColor = "#D3BAEC";
     }
     for(let i = 1; i < 15; i++) {
-      if(i % 2 == 0) {
+      if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#A98BC8";
       } else {
         document.getElementById("drop"+i).style.backgroundColor = "#D3BAEC";
@@ -129,7 +129,7 @@ function setColors(roleSelected) {
       document.getElementById("table"+i).style.backgroundColor = "#99ace8";
     }
     for(let i = 1; i < 15; i++) {
-      if(i % 2 == 0) {
+      if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#7b94e0";
       } else {
         document.getElementById("drop"+i).style.backgroundColor = "#99ace8";
@@ -139,7 +139,7 @@ function setColors(roleSelected) {
       document.getElementById("tableHead" + i).style.backgroundColor = "#2d448c";
     }
   } else if (roleSelected == "DPS") {
-    document.body.style.backgroundColor = "#2a2a30";
+    document.body.style.backgroundColor = "#0d0d0f";
     document.getElementById("roleSelect").style.backgroundColor = "#2a2a30";
     document.getElementById("bottomButton1").style.backgroundColor = "#6e6e73";
     document.getElementById("bottomButton2").style.backgroundColor = "#6e6e73";
@@ -147,7 +147,7 @@ function setColors(roleSelected) {
       document.getElementById("table"+i).style.backgroundColor = "#6e6e73";
     }
     for(let i = 1; i < 15; i++) {
-      if(i % 2 == 0) {
+      if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#ababb3";
       } else {
         document.getElementById("drop"+i).style.backgroundColor = "#6e6e73";
