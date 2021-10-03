@@ -77,6 +77,7 @@ function showAllNotes() {
       document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div id='innerNote"+i+"' class='innerAllNotes'><label style='text-decoration: underline; font-weight: bold;'>"+title+": </label><br/><span class='input' role='textbox' contenteditable style='width:90%;'>"+notes+"</span></div>";
     }
   }
+  setColors();
 }
 
 function changeRole() {
@@ -87,23 +88,22 @@ function changeRole() {
   if(document.getElementById("roleSelect").value == "Healer") {
     for (let i = 0; i < 11; i++) {
       document.getElementById("link" + (i+1)).innerHTML = healerList[i];
-      setColors("Healer");
     }
   } else if (document.getElementById("roleSelect").value == "Tank") {
     for (let i = 0; i < 11; i++) {
       document.getElementById("link" + (i+1)).innerHTML = tankList[i];
-      setColors("Tank");
     }
   } else if (document.getElementById("roleSelect").value == "DPS") {
     for (let i = 0; i < 11; i++) {
       document.getElementById("link" + (i+1)).innerHTML = dpsList[i];
-      setColors("DPS");
     }
   }
+  setColors();
 }
 
-function setColors(roleSelected) {
-  if(roleSelected == "Healer") {
+function setColors() {
+  var role = document.getElementById("roleSelect").value;
+  if(role == "Healer") {
     document.body.style.backgroundColor = "#54178A";
     document.getElementById("roleSelect").style.backgroundColor = "#54178A";
     document.getElementById("psn").style.backgroundColor = "#D3BAEC";
@@ -131,7 +131,7 @@ function setColors(roleSelected) {
     for(let i = 1; i < 11; i++) {
       document.getElementById("tableRow"+i).style.backgroundColor = "#A98BC8";
     }
-  } else if (roleSelected == "Tank") {
+  } else if (role == "Tank") {
     document.body.style.backgroundColor = "#0E1B44";
     document.getElementById("roleSelect").style.backgroundColor = "#0E1B44";
     document.getElementById("psn").style.backgroundColor = "#99ace8";
@@ -159,7 +159,7 @@ function setColors(roleSelected) {
     for(let i = 1; i < 11; i++) {
       document.getElementById("tableRow"+i).style.backgroundColor = "#7b94e0";
     }
-  } else if (roleSelected == "DPS") {
+  } else if (role == "DPS") {
     document.body.style.backgroundColor = "#0d0d0f";
     document.getElementById("roleSelect").style.backgroundColor = "#0d0d0f";
     document.getElementById("psn").style.backgroundColor = "#6e6e73";
@@ -192,7 +192,8 @@ function setColors(roleSelected) {
 
 function classChanged() {
   var characterClass = document.getElementById("classSelect").value;
-  if(document.getElementById("roleSelect").value == "Healer") {
+  var role = document.getElementById("roleSelect").value;
+  if(role == "Healer") {
     if(characterClass == "Dragonknight") {
       document.getElementById("link13").innerHTML = "You did DK healer stuff";
       document.getElementById("notes13").value = "";
@@ -212,7 +213,7 @@ function classChanged() {
       document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
       document.getElementById("notes13").value = "";
     }
-  } else if (document.getElementById("roleSelect").value == "Tank") {
+  } else if (role == "Tank") {
     if(characterClass == "Dragonknight") {
       document.getElementById("link13").innerHTML = "You did DK tank stuff";
       document.getElementById("notes13").value = "";
@@ -232,7 +233,7 @@ function classChanged() {
       document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
       document.getElementById("notes13").value = "";
     }
-  } else if (document.getElementById("roleSelect").value == "DPS") {
+  } else if (role == "DPS") {
     if(characterClass == "Dragonknight") {
       document.getElementById("link13").innerHTML = "You did DK DPS stuff";
       document.getElementById("notes13").value = "";
