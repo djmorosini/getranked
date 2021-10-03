@@ -74,12 +74,13 @@ function showAllNotes() {
     if(!document.getElementById("notes" + i).value == "") {
       var title = document.getElementById('link' + i).innerHTML;
       var notes = document.getElementById('notes' + i).value;
-      document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div class='innerAllNotes'><label style='text-decoration: underline; font-weight: bold;'>"+title+": </label><br/><span class='input' role='textbox' contenteditable style='width:90%;'>"+notes+"</span></div>";
+      document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div id='innerNote"+i+"' class='innerAllNotes'><label style='text-decoration: underline; font-weight: bold;'>"+title+": </label><br/><span class='input' role='textbox' contenteditable style='width:90%;'>"+notes+"</span></div>";
     }
   }
 }
 
 function changeRole() {
+  classChanged();
   var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Overall raid awareness", "Proper RO usage & uptime", "MK/Zen's usage & uptime", "Olorime Placement", "SPC uptime"];
   var tankList = ["Elemental Drain uptime", "Tank skills usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Overall raid awareness", "PA uptime", "Galenwe uptime", "Olorime Placement", "Breach uptime"];
   var dpsList = ["Rotation uptimes", "Certain amount of deaths", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts", "Positioning", "Overall raid awareness", "EC usage & uptime", "MK usage & uptime", "Zen's usage & uptime", "MA usage & uptime"];
@@ -106,16 +107,21 @@ function setColors(roleSelected) {
     document.body.style.backgroundColor = "#54178A";
     document.getElementById("roleSelect").style.backgroundColor = "#54178A";
     document.getElementById("psn").style.backgroundColor = "#D3BAEC";
+    document.getElementById("allNotes").style.backgroundColor = "#A98BC8";
     document.getElementById("bottomButton1").style.backgroundColor = "#A98BC8";
     document.getElementById("bottomButton2").style.backgroundColor = "#A98BC8";
     for(let i = 1; i < 5; i++) {
       document.getElementById("table"+i).style.backgroundColor = "#D3BAEC";
     }
     for(let i = 1; i < 15; i++) {
+      document.getElementById("notes" + i).style.backgroundColor = "#A98BC8";
       if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#A98BC8";
       } else {
         document.getElementById("drop"+i).style.backgroundColor = "#D3BAEC";
+      }
+      if(document.getElementById("innerNote" + i)) {
+        document.getElementById("innerNote" + i).style.backgroundColor = "#A98BC8";
       }
     }
     for(let i = 1; i < 7; i++) {
@@ -128,16 +134,21 @@ function setColors(roleSelected) {
     document.body.style.backgroundColor = "#0E1B44";
     document.getElementById("roleSelect").style.backgroundColor = "#0E1B44";
     document.getElementById("psn").style.backgroundColor = "#99ace8";
+    document.getElementById("allNotes").style.backgroundColor = "#7b94e0";
     document.getElementById("bottomButton1").style.backgroundColor = "#7b94e0";
     document.getElementById("bottomButton2").style.backgroundColor = "#7b94e0";
     for(let i = 1; i < 5; i++) {
       document.getElementById("table"+i).style.backgroundColor = "#99ace8";
     }
     for(let i = 1; i < 15; i++) {
+      document.getElementById("notes" + i).style.backgroundColor = "#7b94e0";
       if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#7b94e0";
       } else {
         document.getElementById("drop"+i).style.backgroundColor = "#99ace8";
+      }
+      if(document.getElementById("innerNote" + i)) {
+        document.getElementById("innerNote" + i).style.backgroundColor = "#7b94e0";
       }
     }
     for(let i = 1; i < 7; i++) {
@@ -150,16 +161,21 @@ function setColors(roleSelected) {
     document.body.style.backgroundColor = "#0d0d0f";
     document.getElementById("roleSelect").style.backgroundColor = "#0d0d0f";
     document.getElementById("psn").style.backgroundColor = "#6e6e73";
+    document.getElementById("allNotes").style.backgroundColor = "#6e6e73";
     document.getElementById("bottomButton1").style.backgroundColor = "#6e6e73";
     document.getElementById("bottomButton2").style.backgroundColor = "#6e6e73";
     for(let i = 1; i < 5; i++) {
       document.getElementById("table"+i).style.backgroundColor = "#6e6e73";
     }
     for(let i = 1; i < 15; i++) {
+      document.getElementById("notes" + i).style.backgroundColor = "#6e6e73";
       if((i % 2) == 0) {
         document.getElementById("drop"+i).style.backgroundColor = "#ababb3";
       } else {
         document.getElementById("drop"+i).style.backgroundColor = "#6e6e73";
+      }
+      if(document.getElementById("innerNote" + i)) {
+        document.getElementById("innerNote" + i).style.backgroundColor = "#6e6e73";
       }
     }
     for(let i = 1; i < 7; i++) {
@@ -173,24 +189,66 @@ function setColors(roleSelected) {
 
 function classChanged() {
   var characterClass = document.getElementById("classSelect").value;
-  if(characterClass == "Dragonknight") {
-    document.getElementById("link13").innerHTML = "You did DK healer stuff";
-    document.getElementById("notes13").value = "";
-  } else if (characterClass == "Necromancer") {
-    document.getElementById("link13").innerHTML = "Empowering Grasp uptime";
-    document.getElementById("notes13").value = "";
-  } else if (characterClass == "Nightblade") {
-    document.getElementById("link13").innerHTML = "You did NB healer stuff";
-    document.getElementById("notes13").value = "";
-  } else if (characterClass == "Sorcerer") {
-    document.getElementById("link13").innerHTML = "You did Sorc healer stuff";
-    document.getElementById("notes13").value = "";
-  } else if (characterClass == "Templar") {
-    document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
-    document.getElementById("notes13").value = "";
-  } else if (characterClass == "Warden") {
-    document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
-    document.getElementById("notes13").value = "";
+  if(document.getElementById("roleSelect").value == "Healer") {
+    if(characterClass == "Dragonknight") {
+      document.getElementById("link13").innerHTML = "You did DK healer stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Necromancer") {
+      document.getElementById("link13").innerHTML = "Empowering Grasp uptime";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Nightblade") {
+      document.getElementById("link13").innerHTML = "You did NB healer stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Sorcerer") {
+      document.getElementById("link13").innerHTML = "You did Sorc healer stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Templar") {
+      document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Warden") {
+      document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
+      document.getElementById("notes13").value = "";
+    }
+  } else if (document.getElementById("roleSelect").value == "Tank") {
+    if(characterClass == "Dragonknight") {
+      document.getElementById("link13").innerHTML = "You did DK tank stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Necromancer") {
+      document.getElementById("link13").innerHTML = "Empowering Grasp uptime";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Nightblade") {
+      document.getElementById("link13").innerHTML = "You did NB tank stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Sorcerer") {
+      document.getElementById("link13").innerHTML = "You did Sorc tank stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Templar") {
+      document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Warden") {
+      document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
+      document.getElementById("notes13").value = "";
+    }
+  } else if (document.getElementById("roleSelect").value == "DPS") {
+    if(characterClass == "Dragonknight") {
+      document.getElementById("link13").innerHTML = "You did DK DPS stuff";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Necromancer") {
+      document.getElementById("link13").innerHTML = "Skeletal mage uptimes";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Nightblade") {
+      document.getElementById("link13").innerHTML = "You Impaled everything";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Sorcerer") {
+      document.getElementById("link13").innerHTML = "Minor Prophecy uptime";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Templar") {
+      document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
+      document.getElementById("notes13").value = "";
+    } else if (characterClass == "Warden") {
+      document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
+      document.getElementById("notes13").value = "";
+    }
   }
 }
 
