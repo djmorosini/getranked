@@ -105,12 +105,57 @@ function setColors(roleSelected) {
   if(roleSelected == "Healer") {
     document.body.style.backgroundColor = "#54178A";
     document.getElementById("roleSelect").style.backgroundColor = "#54178A";
+    document.getElementById("bottomButton1").style.backgroundColor = "#A98BC8";
+    document.getElementById("bottomButton2").style.backgroundColor = "#A98BC8";
+    for(let i = 1; i < 5; i++) {
+      document.getElementById("table"+i).style.backgroundColor = "#D3BAEC";
+    }
+    for(let i = 1; i < 15; i++) {
+      if(i % 2 == 0) {
+        document.getElementById("drop"+i).style.backgroundColor = "#A98BC8";
+      } else {
+        document.getElementById("drop"+i).style.backgroundColor = "#D3BAEC";
+      }
+    }
+    for(let i = 1; i < 7; i++) {
+      document.getElementById("tableHead" + 1).style.backgroundColor = "#8649C3";
+    }
   } else if (roleSelected == "Tank") {
-    document.body.style.backgroundColor = "darkblue";
-    document.getElementById("roleSelect").style.backgroundColor = "darkblue";
+    document.body.style.backgroundColor = "#0E1B44";
+    document.getElementById("roleSelect").style.backgroundColor = "#0E1B44";
+    document.getElementById("bottomButton1").style.backgroundColor = "#7b94e0";
+    document.getElementById("bottomButton2").style.backgroundColor = "#7b94e0";
+    for(let i = 1; i < 5; i++) {
+      document.getElementById("table"+i).style.backgroundColor = "#99ace8";
+    }
+    for(let i = 1; i < 15; i++) {
+      if(i % 2 == 0) {
+        document.getElementById("drop"+i).style.backgroundColor = "#7b94e0";
+      } else {
+        document.getElementById("drop"+i).style.backgroundColor = "#99ace8";
+      }
+    }
+    for(let i = 1; i < 7; i++) {
+      document.getElementById("tableHead" + 1).style.backgroundColor = "#2d448c";
+    }
   } else if (roleSelected == "DPS") {
     document.body.style.backgroundColor = "black";
-    document.getElementById("roleSelect").style.backgroundColor = "black";
+    document.getElementById("roleSelect").style.backgroundColor = "#2a2a30";
+    document.getElementById("bottomButton1").style.backgroundColor = "#6e6e73";
+    document.getElementById("bottomButton2").style.backgroundColor = "#6e6e73";
+    for(let i = 1; i < 5; i++) {
+      document.getElementById("table"+i).style.backgroundColor = "#6e6e73";
+    }
+    for(let i = 1; i < 15; i++) {
+      if(i % 2 == 0) {
+        document.getElementById("drop"+i).style.backgroundColor = "#ababb3";
+      } else {
+        document.getElementById("drop"+i).style.backgroundColor = "#6e6e73";
+      }
+    }
+    for(let i = 1; i < 7; i++) {
+      document.getElementById("tableHead" + 1).style.backgroundColor = "#3c3c42";
+    }
   }
 }
 

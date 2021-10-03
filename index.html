@@ -61,11 +61,11 @@
       <br/>
     </div>
     <div id='main-scoring'>
-      <table class='fullP bigTable'>
+      <table id="table1" class='fullP bigTable'>
         <tr>
-          <th>10 points each (if applicable)</th>
-          <th>Pass/Needs Work</th>
-          <th>Points Earned</th>
+          <th id="tableHead1">10 points each (if applicable)</th>
+          <th id="tableHead2">Pass/Needs Work</th>
+          <th id="tableHead3">Points Earned</th>
         </tr>
         <tr>
           <td><label><a class="notes" id='link1' onclick="showNotepad('1')">Proper RO usage & uptime</a></label></td>
@@ -190,11 +190,11 @@
       </table>
     </div>
     <div id='class-specific'>
-      <table class='fullP smallTable'>
+      <table id="table2" class='fullP smallTable'>
         <tr>
-          <th>20 points each (class-specific)</th>
-          <th>Pass/Needs Work</th>
-          <th>Points Earned</th>
+          <th id="tableHead4">20 points each (class-specific)</th>
+          <th id="tableHead5">Pass/Needs Work</th>
+          <th id="tableHead6">Points Earned</th>
         </tr>
         <tr>
           <td><label><a class="notes" id='link13' onclick="showNotepad('13')">Fletcherflies uptimes</a></label></td>
@@ -219,7 +219,7 @@
       </table>
     </div>
     <div id='scoring' style='width: 95%;'>
-      <table class='halfPL' style='float:left; word-wrap: normal; width: 42%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
+      <table id="table3" class='halfPL' style='float:left; word-wrap: normal; width: 42%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
         <tr>
           <td><label>Total Points Possible is dependent on which items are applicaple</label></td>
         </tr>
@@ -227,7 +227,7 @@
           <td><label>A passing grade of 80% is required to advance rank.</label></td>
         </tr>
       </table>
-      <table class='halfPR' style='float:right; width: 57%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
+      <table id="table4" class='halfPR' style='float:right; width: 57%; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);'>
         <tr>
           <td><label>Score Earned</label></td>
           <td><div id='scoreEarned' style='width: 100px;'></div></td>
@@ -247,8 +247,8 @@
       </table>
     </div>
     <br/>
-    <button style="float: left; clear:both;" onclick="showAllNotes()">Show All Notes</button>
-    <button style="float: left;" onclick="window.print();">Save or Print?</button>
+    <button id="bottomButton1" style="float: left; clear:both; background-color: #A98BC8;" onclick="showAllNotes()">Show All Notes</button>
+    <button id="bottomButton2" style="float: left; background-color: #A98BC8;" onclick="window.print();">Save or Print?</button>
   </div>
   <div id="notepad1" class="notepad" style="position: absolute; visibility: hidden; width: 90%; height: 93%; margin: 3%; top: 0px; left: 0px;">
     <span class="closeNotepad" onclick="closeNotepad('1')">&times;</span>
