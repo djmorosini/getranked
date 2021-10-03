@@ -146,7 +146,7 @@ function setColors() {
   if (role == "Healer") {
     actuallySetColors("#54178A", "#8649C3", "#A98BC8", "#D3BAEC");
   } else if (role == "Tank") {
-    actuallySetColors("#0E1B44", "#2d448c", "#99ace8", "#7b94e0");
+    actuallySetColors("#0E1B44", "#2d448c", "#7b94e0", "#99ace8");
   } else if (role == "DPS") {
     actuallySetColors("#0d0d0f", "#3c3c42", "#6e6e73", "#ababb3");
   }
