@@ -1,8 +1,7 @@
 function updatePoints(selectObject, scoreID, points) {
   var value = selectObject.value;
   if(value == "Pass") {
-    document.getElementById(scoreID).innerHTML = points;
-    document.getElementById(scoreID).style.color = 'green';
+    document.getElementById(scoreID).innerHTML = "<input style='color: green; text-align: center;' TYPE='number' MIN='5' MAX='10' VALUE='"+points+"' />";
     selectObject.style.color = 'green'
   } else if (value == "Needs Work") {
     document.getElementById(scoreID).innerHTML = 0;
@@ -101,92 +100,44 @@ function changeRole() {
   setColors();
 }
 
+function actuallySetColors(background, header, row1, row2) {
+  document.body.style.backgroundColor = background;
+    document.getElementById("roleSelect").style.backgroundColor = background;
+    document.getElementById("psn").style.backgroundColor = row1;
+    document.getElementById("allNotes").style.backgroundColor = row2;
+    document.getElementById("bottomButton1").style.backgroundColor = row2;
+    document.getElementById("bottomButton2").style.backgroundColor = row2;
+    for(let i = 1; i < 5; i++) {
+      document.getElementById("table"+i).style.backgroundColor = row1;
+    }
+    for(let i = 1; i < 15; i++) {
+      document.getElementById("notes" + i).style.backgroundColor = row1;
+      document.getElementById("notepad" + i).style.backgroundColor = row2;
+      if((i % 2) == 0) {
+        document.getElementById("drop"+i).style.backgroundColor = row2;
+      } else {
+        document.getElementById("drop"+i).style.backgroundColor = row1;
+      }
+      if(document.getElementById("innerNote" + i)) {
+        document.getElementById("innerNote" + i).style.backgroundColor = row2;
+      }
+    }
+    for(let i = 1; i < 7; i++) {
+      document.getElementById("tableHead" + i).style.backgroundColor = header;
+    }
+    for(let i = 1; i < 11; i++) {
+      document.getElementById("tableRow"+i).style.backgroundColor = row2;
+    }
+}
+
 function setColors() {
   var role = document.getElementById("roleSelect").value;
   if(role == "Healer") {
-    document.body.style.backgroundColor = "#54178A";
-    document.getElementById("roleSelect").style.backgroundColor = "#54178A";
-    document.getElementById("psn").style.backgroundColor = "#D3BAEC";
-    document.getElementById("allNotes").style.backgroundColor = "#A98BC8";
-    document.getElementById("bottomButton1").style.backgroundColor = "#A98BC8";
-    document.getElementById("bottomButton2").style.backgroundColor = "#A98BC8";
-    for(let i = 1; i < 5; i++) {
-      document.getElementById("table"+i).style.backgroundColor = "#D3BAEC";
-    }
-    for(let i = 1; i < 15; i++) {
-      document.getElementById("notes" + i).style.backgroundColor = "#D3BAEC";
-      document.getElementById("notepad" + i).style.backgroundColor = "#A98BC8";
-      if((i % 2) == 0) {
-        document.getElementById("drop"+i).style.backgroundColor = "#A98BC8";
-      } else {
-        document.getElementById("drop"+i).style.backgroundColor = "#D3BAEC";
-      }
-      if(document.getElementById("innerNote" + i)) {
-        document.getElementById("innerNote" + i).style.backgroundColor = "#A98BC8";
-      }
-    }
-    for(let i = 1; i < 7; i++) {
-      document.getElementById("tableHead" + i).style.backgroundColor = "#8649C3";
-    }
-    for(let i = 1; i < 11; i++) {
-      document.getElementById("tableRow"+i).style.backgroundColor = "#A98BC8";
-    }
+    actuallySetColors("#54178A", "#8649C3", "#D3BAEC", "#A98BC8");
   } else if (role == "Tank") {
-    document.body.style.backgroundColor = "#0E1B44";
-    document.getElementById("roleSelect").style.backgroundColor = "#0E1B44";
-    document.getElementById("psn").style.backgroundColor = "#99ace8";
-    document.getElementById("allNotes").style.backgroundColor = "#7b94e0";
-    document.getElementById("bottomButton1").style.backgroundColor = "#7b94e0";
-    document.getElementById("bottomButton2").style.backgroundColor = "#7b94e0";
-    for(let i = 1; i < 5; i++) {
-      document.getElementById("table"+i).style.backgroundColor = "#99ace8";
-    }
-    for(let i = 1; i < 15; i++) {
-      document.getElementById("notes" + i).style.backgroundColor = "#99ace8";
-      document.getElementById("notepad" + i).style.backgroundColor = "#7b94e0";
-      if((i % 2) == 0) {
-        document.getElementById("drop"+i).style.backgroundColor = "#7b94e0";
-      } else {
-        document.getElementById("drop"+i).style.backgroundColor = "#99ace8";
-      }
-      if(document.getElementById("innerNote" + i)) {
-        document.getElementById("innerNote" + i).style.backgroundColor = "#7b94e0";
-      }
-    }
-    for(let i = 1; i < 7; i++) {
-      document.getElementById("tableHead" + i).style.backgroundColor = "#2d448c";
-    }
-    for(let i = 1; i < 11; i++) {
-      document.getElementById("tableRow"+i).style.backgroundColor = "#7b94e0";
-    }
+    actuallySetColors("#0E1B44", "#2d448c", "#99ace8", "#7b94e0");
   } else if (role == "DPS") {
-    document.body.style.backgroundColor = "#0d0d0f";
-    document.getElementById("roleSelect").style.backgroundColor = "#0d0d0f";
-    document.getElementById("psn").style.backgroundColor = "#6e6e73";
-    document.getElementById("allNotes").style.backgroundColor = "#6e6e73";
-    document.getElementById("bottomButton1").style.backgroundColor = "#6e6e73";
-    document.getElementById("bottomButton2").style.backgroundColor = "#6e6e73";
-    for(let i = 1; i < 5; i++) {
-      document.getElementById("table"+i).style.backgroundColor = "#6e6e73";
-    }
-    for(let i = 1; i < 15; i++) {
-      document.getElementById("notes" + i).style.backgroundColor = "#6e6e73";
-      document.getElementById("notepad" + i).style.backgroundColor = "#ababb3";
-      if((i % 2) == 0) {
-        document.getElementById("drop"+i).style.backgroundColor = "#ababb3";
-      } else {
-        document.getElementById("drop"+i).style.backgroundColor = "#6e6e73";
-      }
-      if(document.getElementById("innerNote" + i)) {
-        document.getElementById("innerNote" + i).style.backgroundColor = "#6e6e73";
-      }
-    }
-    for(let i = 1; i < 7; i++) {
-      document.getElementById("tableHead" + i).style.backgroundColor = "#3c3c42";
-    }
-    for(let i = 1; i < 11; i++) {
-      document.getElementById("tableRow" + i).style.backgroundColor = "#ababb3";
-    }
+    actuallySetColors("#0d0d0f", "#3c3c42", "#6e6e73", "#ababb3");
   }
 }
 
@@ -215,7 +166,7 @@ function classChanged() {
     }
   } else if (role == "Tank") {
     if(characterClass == "Dragonknight") {
-      document.getElementById("link13").innerHTML = "You did DK tank stuff";
+      document.getElementById("link13").innerHTML = "Stone fist or engulfing uptime";
       document.getElementById("notes13").value = "";
     } else if (characterClass == "Necromancer") {
       document.getElementById("link13").innerHTML = "Empowering Grasp uptime";
@@ -224,7 +175,7 @@ function classChanged() {
       document.getElementById("link13").innerHTML = "You did NB tank stuff";
       document.getElementById("notes13").value = "";
     } else if (characterClass == "Sorcerer") {
-      document.getElementById("link13").innerHTML = "You did Sorc tank stuff";
+      document.getElementById("link13").innerHTML = "Minor Prophecy uptime";
       document.getElementById("notes13").value = "";
     } else if (characterClass == "Templar") {
       document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
@@ -238,7 +189,7 @@ function classChanged() {
       document.getElementById("link13").innerHTML = "You did DK DPS stuff";
       document.getElementById("notes13").value = "";
     } else if (characterClass == "Necromancer") {
-      document.getElementById("link13").innerHTML = "Skeletal mage uptimes";
+      document.getElementById("link13").innerHTML = "You did Necro DPS stuff";
       document.getElementById("notes13").value = "";
     } else if (characterClass == "Nightblade") {
       document.getElementById("link13").innerHTML = "You Impaled everything";
