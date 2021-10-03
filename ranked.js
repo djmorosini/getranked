@@ -162,7 +162,7 @@ function setColors(roleSelected) {
     for(let i = 1; i < 7; i++) {
       document.getElementById("tableHead" + i).style.backgroundColor = "#3c3c42";
     }
-    for(let i = 1; i < 12; i++) {
+    for(let i = 1; i < 11; i++) {
       document.getElementById("tableRow"+i).style.backgroundColor = "#ababb3";
     }
   }
