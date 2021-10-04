@@ -148,11 +148,11 @@ function setGearDropdowns() {
     document.getElementById("gear1").innerHTML = "<option selected='selected'>SPC</option><option>VoO</option><option>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
     document.getElementById("gear2").innerHTML = "<option>SPC</option><option>VoO</option><option selected='selected'>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
   } else if(role == "Tank") {
-    document.getElementById("gear1").innerHTML = "<option selected='selected'>CoY</option><option>AoG</option><option>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
-    document.getElementById("gear2").innerHTML = "<option>CoY</option><option>AoG</option><option selected='selected'>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>CoY</option><option>AoG</option><option>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option><option>Non</option>";
+    document.getElementById("gear2").innerHTML = "<option>CoY</option><option>AoG</option><option selected='selected'>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option><option>Non</option>";
   } else if(role == "DPS") {
-    document.getElementById("gear1").innerHTML = "<option>MA</option><option selected='selected'>EC</option><option>Zen's</option><option>MK</option><option>Oth</option>";
-    document.getElementById("gear2").innerHTML = "<option>MA</option><option>EC</option><option>Zen's</option><option>MK</option><option selected='selected'>Oth</option>";
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>BM</option><option>MA</option><option>EC</option><option>Zen's</option><option>MK</option><option>Oth</option><option>Non</option>";
+    document.getElementById("gear2").innerHTML = "<option>BM</option><option>MA</option><option>EC</option><option>Zen's</option><option>MK</option><option selected='selected'>Oth</option><option>Non</option>";
   }
 }
 
@@ -274,6 +274,13 @@ function switchIt(variable, myRow) {
           document.getElementById("link11").innerHTML = "Worm uptimes";
         }
         break;
+      case "Non":
+        if(myRow == "1") {
+          document.getElementById("link10").innerHTML = "Not shown";
+        } else {
+          document.getElementById("link11").innerHTML = "Not shown";
+        }
+        break;
       case "Oth":
         if(myRow == "1") {
           document.getElementById("link10").innerHTML = "Proper gear?";
@@ -316,6 +323,20 @@ function switchIt(variable, myRow) {
           document.getElementById("link10").innerHTML = "Zen's uptimes";
         } else {
           document.getElementById("link11").innerHTML = "Zen's uptimes";
+        }
+        break;
+      case "BM":
+        if(myRow == "1") {
+          document.getElementById("link10").innerHTML = "Kept low mag (below 50%)";
+        } else {
+          document.getElementById("link11").innerHTML = "Kept low mag (below 50%)";
+        }
+        break;
+      case "Non":
+        if(myRow == "1") {
+          document.getElementById("link10").innerHTML = "Not shown";
+        } else {
+          document.getElementById("link11").innerHTML = "Not shown";
         }
         break;
       case "Oth":
