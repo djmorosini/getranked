@@ -41,7 +41,7 @@ function changeRole() {
 }
 
 function clearNotes() {
-  for(let i = 0; i < 15; i++) {
+  for(let i = 1; i < 15; i++) {
     document.getElementById("notes" + i).value = "";
   }
 }
