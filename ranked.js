@@ -106,6 +106,7 @@ function changeRole() {
   classChanged();
   setColors();
   setGearDropdowns();
+  setGearRows();
 }
 
 function actuallySetColors(background, header, row1, row2) {
@@ -407,6 +408,5 @@ function addListeners() {
 
 function pageInit() {
   changeRole();
-  setGearRows();
   addListeners();
 }
