@@ -79,17 +79,17 @@ function classChanged() {
     }
   } else if (role == "DPS") {
     if (characterClass == "Dragonknight") {
-      document.getElementById("link13").innerHTML = "You did DK DPS stuff";
+      document.getElementById("link13").innerHTML = "Engulfing (every 14 seconds)";
     } else if (characterClass == "Necromancer") {
-      document.getElementById("link13").innerHTML = "You did Necro DPS stuff";
+      document.getElementById("link13").innerHTML = "Boneyard (on add pulls)";
     } else if (characterClass == "Nightblade") {
-      document.getElementById("link13").innerHTML = "You Impaled everything";
+      document.getElementById("link13").innerHTML = "Merciless Resolve/Bow proc";
     } else if (characterClass == "Sorcerer") {
-      document.getElementById("link13").innerHTML = "Minor Prophecy uptime";
+      document.getElementById("link13").innerHTML = "Minor Prophecy (every 20 seconds)";
     } else if (characterClass == "Templar") {
-      document.getElementById("link13").innerHTML = "Minor Sorcery uptime";
+      document.getElementById("link13").innerHTML = "Minor Sorcery (every 20 seconds)";
     } else if (characterClass == "Warden") {
-      document.getElementById("link13").innerHTML = "Fletcherflies uptimes";
+      document.getElementById("link13").innerHTML = "Fletcherflies (every 10 seconds per mob)";
     }
   }
   document.getElementById("notes13").value = "";
