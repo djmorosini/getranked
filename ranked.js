@@ -12,25 +12,23 @@ function addListeners() {
 }
 
 function changeRole() {
-  var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness"];
-  var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness"];
-  var dpsList = ["Rotation", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness"];
+  var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Rotation", "Bar setup"];
+  var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Holding taunt", "Blocking properly"];
+  var dpsList = ["Full Rotations", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness", "Extra DPS Mechanic", "Appropriate resurrections"];
 
   if (document.getElementById("roleSelect").value == "Healer") {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = healerList[i];
     }
   } else if (document.getElementById("roleSelect").value == "Tank") {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = tankList[i];
     }
   } else if (document.getElementById("roleSelect").value == "DPS") {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
   }
-  document.getElementById("link8").innerHTML = "";
-  document.getElementById("link9").innerHTML = "";
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
   clearNotes();
