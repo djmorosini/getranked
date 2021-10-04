@@ -8,9 +8,6 @@ function changeRole() {
   var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness"];
   var dpsList = ["Rotation", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness"];
 
-  var healerGear = ["Proper RO usage & uptime", "MK/Zen's usage & uptime", "Olorime Placement", "SPC uptime"];
-  var tankGear = ["PA uptime", "Galenwe uptime", "Olorime Placement", "Breach uptime"];
-  var dpsGear = ["EC usage & uptime", "MK usage & uptime", "Zen's usage & uptime", "MA usage & uptime"];
   if (document.getElementById("roleSelect").value == "Healer") {
     for (let i = 0; i < 7; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = healerList[i];
@@ -24,8 +21,11 @@ function changeRole() {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
   }
+  document.getElementById("link8").innerHTML = "";
+  document.getElementById("link9").innerHTML = "";
   document.getElementById("link12").innerHTML = "";
-  document.getElementById("notes12").value = "";
+  document.getElementById("link14").innerHTML = "";
+  clearNotes();
   classChanged();
   setColors();
   setGearDropdowns();
@@ -37,6 +37,12 @@ function addListeners() {
     document.getElementById('notes' + i).addEventListener('focusout', function (e) {
       closeNotepad(i);
     });
+  }
+}
+
+function clearNotes() {
+  for(let i = 0; i < 15; i++) {
+    document.getElementById("notes" + i).value = "";
   }
 }
 
