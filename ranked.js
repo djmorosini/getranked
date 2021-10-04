@@ -87,7 +87,7 @@ function classChanged() {
     } else if (characterClass == "Templar") {
       document.getElementById("link13").innerHTML = "Minor Sorcery (every 20 seconds)";
     } else if (characterClass == "Warden") {
-      document.getElementById("link13").innerHTML = "Fletcherflies (every 10 seconds per mob)";
+      document.getElementById("link13").innerHTML = "Fletcherflies (every 10 seconds)";
     }
   }
   document.getElementById("notes13").value = "";
