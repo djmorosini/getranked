@@ -127,9 +127,9 @@ function actuallySetColors(background, header, row1, row2) {
     document.getElementById("notes" + i).style.backgroundColor = row1;
     document.getElementById("notepad" + i).style.backgroundColor = row2;
     if ((i % 2) == 0) {
-      document.getElementById("drop" + i).style.backgroundColor = row2;
-    } else {
       document.getElementById("drop" + i).style.backgroundColor = row1;
+    } else {
+      document.getElementById("drop" + i).style.backgroundColor = row2;
     }
     if (document.getElementById("innerNote" + i)) {
       document.getElementById("innerNote" + i).style.backgroundColor = row2;
