@@ -105,6 +105,7 @@ function changeRole() {
   document.getElementById("notes12").value = "";
   classChanged();
   setColors();
+  setGearDropdowns();
 }
 
 function actuallySetColors(background, header, row1, row2) {
@@ -272,60 +273,53 @@ function switchIt(variable, myRow) {
     }
   } else if (role == "Tank") {
     switch (variable) {
-      case "SPC":
+      case "AoG":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "SPC uptimes";
+          document.getElementById("link10").innerHTML = "Empowered uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "SPC uptimes";
+          document.getElementById("link11").innerHTML = "Empowered uptimes";
         }
         break;
-      case "VoO":
+      case "CoY":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "VoO uptimes";
+          document.getElementById("link10").innerHTML = "CoY uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "VoO uptimes";
+          document.getElementById("link11").innerHTML = "CoY uptimes";
         }
         break;
-      case "HT":
+      case "CO":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "HT uptimes";
+          document.getElementById("link10").innerHTML = "CO uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "HT uptimes";
+          document.getElementById("link11").innerHTML = "CO uptimes";
         }
         break;
-      case "RO":
+      case "PA":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "RO uptimes";
+          document.getElementById("link10").innerHTML = "PA uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "RO uptimes";
+          document.getElementById("link11").innerHTML = "PA uptimes";
         }
         break;
-      case "JG":
+      case "Sax":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "JG uptimes";
+          document.getElementById("link10").innerHTML = "Sax usage";
         } else {
-          document.getElementById("link11").innerHTML = "JG uptimes";
+          document.getElementById("link11").innerHTML = "Sax usage";
         }
         break;
-      case "STO":
+      case "WR":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "STO uptimes";
+          document.getElementById("link10").innerHTML = "Worm uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "STO uptimes";
-        }
-        break;
-      case "MK":
-        if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "MK uptimes";
-        } else {
-          document.getElementById("link11").innerHTML = "MK uptimes";
+          document.getElementById("link11").innerHTML = "Worm uptimes";
         }
         break;
       case "Oth":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "What were you wearing?";
+          document.getElementById("link10").innerHTML = "Proper gear?";
         } else {
-          document.getElementById("link11").innerHTML = "What were you wearing?";
+          document.getElementById("link11").innerHTML = "Proper gear?";
         }
         break;
       default:
@@ -337,46 +331,18 @@ function switchIt(variable, myRow) {
     }
   } else if (role == "DPS") {
     switch (variable) {
-      case "SPC":
+      case "MA":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "SPC uptimes";
+          document.getElementById("link10").innerHTML = "MA uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "SPC uptimes";
+          document.getElementById("link11").innerHTML = "MA uptimes";
         }
         break;
-      case "VoO":
+      case "EC":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "VoO uptimes";
+          document.getElementById("link10").innerHTML = "EC uptimes";
         } else {
-          document.getElementById("link11").innerHTML = "VoO uptimes";
-        }
-        break;
-      case "HT":
-        if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "HT uptimes";
-        } else {
-          document.getElementById("link11").innerHTML = "HT uptimes";
-        }
-        break;
-      case "RO":
-        if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "RO uptimes";
-        } else {
-          document.getElementById("link11").innerHTML = "RO uptimes";
-        }
-        break;
-      case "JG":
-        if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "JG uptimes";
-        } else {
-          document.getElementById("link11").innerHTML = "JG uptimes";
-        }
-        break;
-      case "STO":
-        if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "STO uptimes";
-        } else {
-          document.getElementById("link11").innerHTML = "STO uptimes";
+          document.getElementById("link11").innerHTML = "EC uptimes";
         }
         break;
       case "MK":
@@ -386,11 +352,18 @@ function switchIt(variable, myRow) {
           document.getElementById("link11").innerHTML = "MK uptimes";
         }
         break;
+      case "Zen's":
+        if(myRow == "1") {
+          document.getElementById("link10").innerHTML = "Zen's uptimes";
+        } else {
+          document.getElementById("link11").innerHTML = "Zen's uptimes";
+        }
+        break;
       case "Oth":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "What were you wearing?";
+          document.getElementById("link10").innerHTML = "Good burn";
         } else {
-          document.getElementById("link11").innerHTML = "What were you wearing?";
+          document.getElementById("link11").innerHTML = "Good burn";
         }
         break;
       default:
@@ -408,6 +381,20 @@ function setGearRows() {
   var gear2 = document.getElementById("gear2").value;
   switchIt(gear1, "1");
   switchIt(gear2, "2");
+}
+
+function setGearDropdowns() {
+  var role = document.getElementById("roleSelect").value;
+  if(role == "Healer") {
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>SPC</option><option>VoO</option><option>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
+    document.getElementById("gear2").innerHTML = "<option>SPC</option><option>VoO</option><option selected='selected'>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
+  } else if(role == "Tank") {
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>CoY</option><option>AoG</option><option>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
+    document.getElementById("gear2").innerHTML = "<option>CoY</option><option>AoG</option><option selected='selected'>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
+  } else if(role == "DPS") {
+    document.getElementById("gear1").innerHTML = "<option>MA</option><option selected='selected'>EC</option><option>Zen's</option><option>MK</option><option>Oth</option>";
+    document.getElementById("gear2").innerHTML = "<option>MA</option><option>EC</option><option>Zen's</option><option>MK</option><option selected='selected'>Oth</option>";
+  }
 }
 
 function addListeners() {
