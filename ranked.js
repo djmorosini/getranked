@@ -3,6 +3,14 @@ function pageInit() {
   addListeners();
 }
 
+function addListeners() {
+  for (let i = 1; i < 15; i++) {
+    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
+      closeNotepad(i);
+    });
+  }
+}
+
 function changeRole() {
   var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness"];
   var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness"];
@@ -30,14 +38,6 @@ function changeRole() {
   setColors();
   setGearDropdowns();
   setGearRows();
-}
-
-function addListeners() {
-  for (let i = 1; i < 15; i++) {
-    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
-      closeNotepad(i);
-    });
-  }
 }
 
 function clearNotes() {
