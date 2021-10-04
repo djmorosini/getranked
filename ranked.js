@@ -1,83 +1,6 @@
-function updatePoints(selectObject, scoreID, points) {
-  var value = selectObject.value;
-  if (value == "Pass") {
-    document.getElementById(scoreID).innerHTML = points;
-    document.getElementById(scoreID).style.color = 'green';
-    selectObject.style.color = 'green';
-  } else if (value == "Needs Work") {
-    document.getElementById(scoreID).innerHTML = 0;
-    document.getElementById(scoreID).style.color = 'red';
-    selectObject.style.color = 'red';
-  } else if (value == "N/A") {
-    document.getElementById(scoreID).innerHTML = 'N/A';
-    document.getElementById(scoreID).style.color = 'black';
-    selectObject.style.color = 'black';
-  }
-  updateScore();
-}
-
-function updateScore() {
-  var totalScore = 0;
-  var possiblePoints = 0;
-  for (let i = 1; i < 15; i++) {
-    if (!isNaN(parseInt(document.getElementById("score" + i).innerHTML))) {
-      totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
-      if (!document.getElementById("drop" + i).classList.contains("lwcls")) {
-        possiblePoints = parseInt(possiblePoints) + 10;
-      } else {
-        possiblePoints = parseInt(possiblePoints) + 20;
-      }
-    }
-  }
-  document.getElementById('scoreEarned').innerHTML = totalScore;
-  document.getElementById('possiblePoints').innerHTML = possiblePoints;
-  document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
-  if ((totalScore / possiblePoints) < 0.8) {
-    document.getElementById('rankAdvanced').innerHTML = 'No';
-    document.getElementById('rankAdvanced').style.color = 'red';
-    document.getElementById('grade').style.color = 'red';
-  } else {
-    document.getElementById('rankAdvanced').innerHTML = 'Yes';
-    document.getElementById('rankAdvanced').style.color = 'green';
-    document.getElementById('grade').style.color = 'green';
-  }
-}
-
-function showNotepad(notepadID) {
-  if (!document.getElementById("link" + notepadID).innerHTML == "") {
-    document.getElementById('notepad' + notepadID).style.visibility = 'visible';
-    document.getElementById("label" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML;
-    document.getElementById("notes" + notepadID).focus();
-  }
-}
-
-function closeNotepad(notepadID) {
-  if (notepadID == "allNotes") {
-    document.getElementById(notepadID).style.visibility = 'hidden';
-  } else {
-    document.getElementById("notepad" + notepadID).style.visibility = 'hidden';
-    if (!document.getElementById("notes" + notepadID).value == "" && !document.getElementById("link" + notepadID).innerHTML.includes("*")) {
-      document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML += "*";
-    } else {
-      if (document.getElementById("link" + notepadID).innerHTML.includes("*") && document.getElementById("notes" + notepadID).value == "") {
-        document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML.slice(0, -1);
-      }
-    }
-  }
-}
-
-function showAllNotes() {
-  document.getElementById('allNotes').style.visibility = 'visible';
-  document.getElementById('allNotes').innerHTML = ""
-  document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += '<span class="closeNotepad" style="position: fixed; color: white;" onclick="closeNotepad(\'allNotes\')">&times;</span>';
-  for (let i = 1; i < 15; i++) {
-    if (!document.getElementById("notes" + i).value == "") {
-      var title = document.getElementById('link' + i).innerHTML;
-      var notes = document.getElementById('notes' + i).value;
-      document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div id='innerNote" + i + "' class='innerAllNotes'><label style='text-decoration: underline; font-weight: bold;'>" + title + ": </label><br/><span class='input' role='textbox' contenteditable style='width:90%;'>" + notes + "</span></div>";
-    }
-  }
-  setColors();
+function pageInit() {
+  changeRole();
+  addListeners();
 }
 
 function changeRole() {
@@ -109,48 +32,11 @@ function changeRole() {
   setGearRows();
 }
 
-function actuallySetColors(background, header, row1, row2) {
-  document.body.style.backgroundColor = background;
-  document.getElementById("roleSelect").style.backgroundColor = background;
-  document.getElementById("psn").style.backgroundColor = row2;
-  document.getElementById("classSelect").style.backgroundColor = row2;
-  document.getElementById("allNotes").style.backgroundColor = row2;
-  document.getElementById("bottomButton1").style.backgroundColor = row2;
-  document.getElementById("bottomButton2").style.backgroundColor = row2;
-  document.getElementById("trialSelect").style.backgroundColor = row2;
-  document.getElementById("gear1").style.backgroundColor = row2;
-  document.getElementById("gear2").style.backgroundColor = row2;
-  for (let i = 1; i < 6; i++) {
-    document.getElementById("table" + i).style.backgroundColor = row1;
-  }
+function addListeners() {
   for (let i = 1; i < 15; i++) {
-    document.getElementById("notes" + i).style.backgroundColor = row1;
-    document.getElementById("notepad" + i).style.backgroundColor = row2;
-    if ((i % 2) == 0) {
-      document.getElementById("drop" + i).style.backgroundColor = row2;
-    } else {
-      document.getElementById("drop" + i).style.backgroundColor = row1;
-    }
-    if (document.getElementById("innerNote" + i)) {
-      document.getElementById("innerNote" + i).style.backgroundColor = row2;
-    }
-  }
-  for (let i = 1; i < 10; i++) {
-    document.getElementById("tableHead" + i).style.backgroundColor = header;
-  }
-  for (let i = 1; i < 11; i++) {
-    document.getElementById("tableRow" + i).style.backgroundColor = row2;
-  }
-}
-
-function setColors() {
-  var role = document.getElementById("roleSelect").value;
-  if (role == "Healer") {
-    actuallySetColors("#54178A", "#8649C3", "#A98BC8", "#D3BAEC");
-  } else if (role == "Tank") {
-    actuallySetColors("#0E1B44", "#2d448c", "#7b94e0", "#99ace8");
-  } else if (role == "DPS") {
-    actuallySetColors("#0d0d0f", "#3c3c42", "#6e6e73", "#ababb3");
+    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
+      closeNotepad(i);
+    });
   }
 }
 
@@ -203,6 +89,72 @@ function classChanged() {
   document.getElementById("notes13").value = "";
   document.getElementById("link14").innerHTML = "";
   document.getElementById("notes14").value = "";
+}
+
+function setColors() {
+  var role = document.getElementById("roleSelect").value;
+  if (role == "Healer") {
+    actuallySetColors("#54178A", "#8649C3", "#A98BC8", "#D3BAEC");
+  } else if (role == "Tank") {
+    actuallySetColors("#0E1B44", "#2d448c", "#7b94e0", "#99ace8");
+  } else if (role == "DPS") {
+    actuallySetColors("#0d0d0f", "#3c3c42", "#6e6e73", "#ababb3");
+  }
+}
+
+function actuallySetColors(background, header, row1, row2) {
+  document.body.style.backgroundColor = background;
+  document.getElementById("roleSelect").style.backgroundColor = background;
+  document.getElementById("psn").style.backgroundColor = row2;
+  document.getElementById("classSelect").style.backgroundColor = row2;
+  document.getElementById("allNotes").style.backgroundColor = row2;
+  document.getElementById("bottomButton1").style.backgroundColor = row2;
+  document.getElementById("bottomButton2").style.backgroundColor = row2;
+  document.getElementById("trialSelect").style.backgroundColor = row2;
+  document.getElementById("gear1").style.backgroundColor = row2;
+  document.getElementById("gear2").style.backgroundColor = row2;
+  for (let i = 1; i < 6; i++) {
+    document.getElementById("table" + i).style.backgroundColor = row1;
+  }
+  for (let i = 1; i < 15; i++) {
+    document.getElementById("notes" + i).style.backgroundColor = row1;
+    document.getElementById("notepad" + i).style.backgroundColor = row2;
+    if ((i % 2) == 0) {
+      document.getElementById("drop" + i).style.backgroundColor = row2;
+    } else {
+      document.getElementById("drop" + i).style.backgroundColor = row1;
+    }
+    if (document.getElementById("innerNote" + i)) {
+      document.getElementById("innerNote" + i).style.backgroundColor = row2;
+    }
+  }
+  for (let i = 1; i < 10; i++) {
+    document.getElementById("tableHead" + i).style.backgroundColor = header;
+  }
+  for (let i = 1; i < 11; i++) {
+    document.getElementById("tableRow" + i).style.backgroundColor = row2;
+  }
+}
+
+function setGearDropdowns() {
+  var role = document.getElementById("roleSelect").value;
+  if(role == "Healer") {
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>SPC</option><option>VoO</option><option>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
+    document.getElementById("gear2").innerHTML = "<option>SPC</option><option>VoO</option><option selected='selected'>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
+  } else if(role == "Tank") {
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>CoY</option><option>AoG</option><option>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
+    document.getElementById("gear2").innerHTML = "<option>CoY</option><option>AoG</option><option selected='selected'>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
+  } else if(role == "DPS") {
+    document.getElementById("gear1").innerHTML = "<option>MA</option><option selected='selected'>EC</option><option>Zen's</option><option>MK</option><option>Oth</option>";
+    document.getElementById("gear2").innerHTML = "<option>MA</option><option>EC</option><option>Zen's</option><option>MK</option><option selected='selected'>Oth</option>";
+  }
+}
+
+function setGearRows() {
+  var gear1 = document.getElementById("gear1").value;
+  var gear2 = document.getElementById("gear2").value;
+  switchIt(gear1, "1");
+  switchIt(gear2, "2");
 }
 
 function switchIt(variable, myRow) {
@@ -377,36 +329,84 @@ function switchIt(variable, myRow) {
   }
 }
 
-function setGearRows() {
-  var gear1 = document.getElementById("gear1").value;
-  var gear2 = document.getElementById("gear2").value;
-  switchIt(gear1, "1");
-  switchIt(gear2, "2");
-}
-
-function setGearDropdowns() {
-  var role = document.getElementById("roleSelect").value;
-  if(role == "Healer") {
-    document.getElementById("gear1").innerHTML = "<option selected='selected'>SPC</option><option>VoO</option><option>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
-    document.getElementById("gear2").innerHTML = "<option>SPC</option><option>VoO</option><option selected='selected'>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
-  } else if(role == "Tank") {
-    document.getElementById("gear1").innerHTML = "<option selected='selected'>CoY</option><option>AoG</option><option>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
-    document.getElementById("gear2").innerHTML = "<option>CoY</option><option>AoG</option><option selected='selected'>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option>";
-  } else if(role == "DPS") {
-    document.getElementById("gear1").innerHTML = "<option>MA</option><option selected='selected'>EC</option><option>Zen's</option><option>MK</option><option>Oth</option>";
-    document.getElementById("gear2").innerHTML = "<option>MA</option><option>EC</option><option>Zen's</option><option>MK</option><option selected='selected'>Oth</option>";
+function updatePoints(selectObject, scoreID, points) {
+  var value = selectObject.value;
+  if (value == "Pass") {
+    document.getElementById(scoreID).innerHTML = points;
+    document.getElementById(scoreID).style.color = 'green';
+    selectObject.style.color = 'green';
+  } else if (value == "Needs Work") {
+    document.getElementById(scoreID).innerHTML = 0;
+    document.getElementById(scoreID).style.color = 'red';
+    selectObject.style.color = 'red';
+  } else if (value == "N/A") {
+    document.getElementById(scoreID).innerHTML = 'N/A';
+    document.getElementById(scoreID).style.color = 'black';
+    selectObject.style.color = 'black';
   }
+  updateScore();
 }
 
-function addListeners() {
+function updateScore() {
+  var totalScore = 0;
+  var possiblePoints = 0;
   for (let i = 1; i < 15; i++) {
-    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
-      closeNotepad(i);
-    });
+    if (!isNaN(parseInt(document.getElementById("score" + i).innerHTML))) {
+      totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
+      if (!document.getElementById("drop" + i).classList.contains("lwcls")) {
+        possiblePoints = parseInt(possiblePoints) + 10;
+      } else {
+        possiblePoints = parseInt(possiblePoints) + 20;
+      }
+    }
+  }
+  document.getElementById('scoreEarned').innerHTML = totalScore;
+  document.getElementById('possiblePoints').innerHTML = possiblePoints;
+  document.getElementById('grade').innerHTML = ((totalScore / possiblePoints) * 100).toFixed(2) + '%';
+  if ((totalScore / possiblePoints) < 0.8) {
+    document.getElementById('rankAdvanced').innerHTML = 'No';
+    document.getElementById('rankAdvanced').style.color = 'red';
+    document.getElementById('grade').style.color = 'red';
+  } else {
+    document.getElementById('rankAdvanced').innerHTML = 'Yes';
+    document.getElementById('rankAdvanced').style.color = 'green';
+    document.getElementById('grade').style.color = 'green';
   }
 }
 
-function pageInit() {
-  changeRole();
-  addListeners();
+function showNotepad(notepadID) {
+  if (!document.getElementById("link" + notepadID).innerHTML == "") {
+    document.getElementById('notepad' + notepadID).style.visibility = 'visible';
+    document.getElementById("label" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML;
+    document.getElementById("notes" + notepadID).focus();
+  }
+}
+
+function closeNotepad(notepadID) {
+  if (notepadID == "allNotes") {
+    document.getElementById(notepadID).style.visibility = 'hidden';
+  } else {
+    document.getElementById("notepad" + notepadID).style.visibility = 'hidden';
+    if (!document.getElementById("notes" + notepadID).value == "" && !document.getElementById("link" + notepadID).innerHTML.includes("*")) {
+      document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML += "*";
+    } else {
+      if (document.getElementById("link" + notepadID).innerHTML.includes("*") && document.getElementById("notes" + notepadID).value == "") {
+        document.getElementById("link" + notepadID).innerHTML = document.getElementById("link" + notepadID).innerHTML.slice(0, -1);
+      }
+    }
+  }
+}
+
+function showAllNotes() {
+  document.getElementById('allNotes').style.visibility = 'visible';
+  document.getElementById('allNotes').innerHTML = ""
+  document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += '<span class="closeNotepad" style="position: fixed; color: white;" onclick="closeNotepad(\'allNotes\')">&times;</span>';
+  for (let i = 1; i < 15; i++) {
+    if (!document.getElementById("notes" + i).value == "") {
+      var title = document.getElementById('link' + i).innerHTML;
+      var notes = document.getElementById('notes' + i).value;
+      document.getElementById('allNotes').innerHTML = document.getElementById('allNotes').innerHTML += "<div id='innerNote" + i + "' class='innerAllNotes'><label style='text-decoration: underline; font-weight: bold;'>" + title + ": </label><br/><span class='input' role='textbox' contenteditable style='width:90%;'>" + notes + "</span></div>";
+    }
+  }
+  setColors();
 }
