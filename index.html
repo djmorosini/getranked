@@ -13,24 +13,8 @@
     <div class='title' style="font-size:14px;">Valhalla <select id="roleSelect" onchange="changeRole()"><option>DPS</option><option selected="selected">Healer</option><option>Tank</option></select> POV Ranking Scorecard</div>
     <div id='header-wrap'>
       <label>Player PSN: </label><input id='psn'></input><select id="gear1" onchange="setGearRows()">
-        <option selected="selected">SPC</option>
-        <option>VoO</option>
-        <option>HT</option>
-        <option>RO</option>
-        <option>JG</option>
-        <option>STO</option>
-        <option>MK</option>
-        <option>Oth</option>
       </select>
       <select id="gear2" onchange="setGearRows()">
-        <option>SPC</option>
-        <option>VoO</option>
-        <option selected="selected">HT</option>
-        <option>RO</option>
-        <option>JG</option>
-        <option>STO</option>
-        <option>MK</option>
-        <option>Oth</option>
       </select>
       <br/>
       <label>Class/Content Submitted:</label>
@@ -71,7 +55,7 @@
           <th id="tableHead3">Points Earned</th>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link1' onclick="showNotepad('1')"></a></label></td>
+          <td><a class="notes" id='link1' onclick="showNotepad('1')"></a></td>
           <td><select id="drop1" onchange="updatePoints(this, 'score1', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -81,7 +65,7 @@
           <td><div class="boldScore" id='score1'></div></td>
         </tr>
         <tr id="tableRow1" class="lightRow">
-          <td><label><a class="notes" id='link2' onclick="showNotepad('2')"></a></label></td>
+          <td><a class="notes" id='link2' onclick="showNotepad('2')"></a></td>
           <td><select id="drop2" class="lightRow" onchange="updatePoints(this, 'score2', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -91,7 +75,7 @@
           <td><div class="boldScore" id='score2'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link3' onclick="showNotepad('3')"></a></label></td>
+          <td><a class="notes" id='link3' onclick="showNotepad('3')"></a></td>
           <td><select id="drop3" onchange="updatePoints(this, 'score3', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -101,7 +85,7 @@
           <td><div class="boldScore" id='score3'></div></td>
         </tr>
         <tr id="tableRow2" class="lightRow">
-          <td><label><a class="notes" id='link4' onclick="showNotepad('4')"></a></label></td>
+          <td><a class="notes" id='link4' onclick="showNotepad('4')"></a></td>
           <td><select id="drop4" class="lightRow" onchange="updatePoints(this, 'score4', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -111,7 +95,7 @@
           <td><div class="boldScore" id='score4'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link5' onclick="showNotepad('5')"></a></label></td>
+          <td><a class="notes" id='link5' onclick="showNotepad('5')"></a></td>
           <td><select id="drop5" onchange="updatePoints(this, 'score5', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -121,7 +105,7 @@
           <td><div class="boldScore" id='score5'></div></td>
         </tr>
         <tr id="tableRow3" class="lightRow">
-          <td><label><a class="notes" id='link6' onclick="showNotepad('6')"></a></label></td>
+          <td><a class="notes" id='link6' onclick="showNotepad('6')"></a></td>
           <td><select id="drop6" class="lightRow" onchange="updatePoints(this, 'score6', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -131,7 +115,7 @@
           <td><div class="boldScore" id='score6'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link7' onclick="showNotepad('7')"></a></label></td>
+          <td><a class="notes" id='link7' onclick="showNotepad('7')"></a></td>
           <td><select id="drop7" onchange="updatePoints(this, 'score7', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -141,7 +125,7 @@
           <td><div class="boldScore" id='score7'></div></td>
         </tr>
         <tr id="tableRow4" class="lightRow">
-          <td><label><a class="notes" id='link8' onclick="showNotepad('8')"></a></label></td>
+          <td><a class="notes" id='link8' onclick="showNotepad('8')"></a></td>
           <td><select id="drop8" class="lightRow" onchange="updatePoints(this, 'score8', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -151,7 +135,7 @@
           <td><div class="boldScore" id='score8'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link9' onclick="showNotepad('9')"></a></label></td>
+          <td><a class="notes" id='link9' onclick="showNotepad('9')"></a></td>
           <td><select id="drop9" onchange="updatePoints(this, 'score9', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -173,7 +157,7 @@
           <th id="tableHead6">Points Earned</th>
         </tr>
         <tr id="tableRow5" class="lightrow">
-          <td><label><a class="notes" id='link10' onclick="showNotepad('10')"></a></label></td>
+          <td><a class="notes" id='link10' onclick="showNotepad('10')"></a></td>
           <td><select class="lightrow" id="drop10" onchange="updatePoints(this, 'score10', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -183,7 +167,7 @@
           <td><div class="boldScore" id='score10'></div></td>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link11' onclick="showNotepad('11')"></a></label></td>
+          <td><a class="notes" id='link11' onclick="showNotepad('11')"></a></td>
           <td><select id="drop11" onchange="updatePoints(this, 'score11', 10)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>
@@ -217,7 +201,7 @@
           <th id="tableHead9">Points Earned</th>
         </tr>
         <tr>
-          <td><label><a class="notes" id='link13' onclick="showNotepad('13')">Fletcherflies uptimes</a></label></td>
+          <td><a class="notes" id='link13' onclick="showNotepad('13')">Fletcherflies uptimes</a></td>
           <td><select class="lwcls" id="drop13" onchange="updatePoints(this, 'score13', 20)">
             <option value="">Select</option>
             <option style="color: green;" value='Pass'>Pass</option>

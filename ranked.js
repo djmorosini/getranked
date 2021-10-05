@@ -143,8 +143,8 @@ function actuallySetColors(background, header, row1, row2) {
 function setGearDropdowns() {
   var role = document.getElementById("roleSelect").value;
   if(role == "Healer") {
-    document.getElementById("gear1").innerHTML = "<option selected='selected'>SPC</option><option>VoO</option><option>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
-    document.getElementById("gear2").innerHTML = "<option>SPC</option><option>VoO</option><option selected='selected'>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option>";
+    document.getElementById("gear1").innerHTML = "<option selected='selected'>SPC</option><option>VoO</option><option>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Zen</option><option>Oth</option><option>Non</option>";
+    document.getElementById("gear2").innerHTML = "<option>SPC</option><option>VoO</option><option selected='selected'>HT</option><option>RO</option><option>JG</option><option>STO</option><option>MK</option><option>Oth</option><option>Non</option>";
   } else if(role == "Tank") {
     document.getElementById("gear1").innerHTML = "<option selected='selected'>CoY</option><option>AoG</option><option>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option><option>Non</option>";
     document.getElementById("gear2").innerHTML = "<option>CoY</option><option>AoG</option><option selected='selected'>WR</option><option>CO</option><option>PA</option><option>Sax</option><option>Oth</option><option>Non</option>";
@@ -174,16 +174,16 @@ function switchIt(variable, myRow) {
         break;
       case "VoO":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "VoO uptimes";
+          document.getElementById("link10").innerHTML = "Olo placement";
         } else {
-          document.getElementById("link11").innerHTML = "VoO uptimes";
+          document.getElementById("link11").innerHTML = "Olo placement";
         }
         break;
       case "HT":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "HT uptimes";
+          document.getElementById("link10").innerHTML = "Stayed alive";
         } else {
-          document.getElementById("link11").innerHTML = "HT uptimes";
+          document.getElementById("link11").innerHTML = "Stayed alive";
         }
         break;
       case "RO":
@@ -195,9 +195,9 @@ function switchIt(variable, myRow) {
         break;
       case "JG":
         if(myRow == "1") {
-          document.getElementById("link10").innerHTML = "JG uptimes";
+          document.getElementById("link10").innerHTML = "Stayed alive";
         } else {
-          document.getElementById("link11").innerHTML = "JG uptimes";
+          document.getElementById("link11").innerHTML = "Stayed alive";
         }
         break;
       case "STO":
@@ -214,11 +214,25 @@ function switchIt(variable, myRow) {
           document.getElementById("link11").innerHTML = "MK uptimes";
         }
         break;
+      case "Zen":
+        if(myRow == "1") {
+          document.getElementById("link10").innerHTML = "Zen uptimes";
+        } else {
+          document.getElementById("link11").innerHTML = "Zen uptimes";
+        }
+        break;
       case "Oth":
         if(myRow == "1") {
           document.getElementById("link10").innerHTML = "What were you wearing?";
         } else {
           document.getElementById("link11").innerHTML = "What were you wearing?";
+        }
+        break;
+      case "Non":
+        if(myRow == "1") {
+          document.getElementById("link10").innerHTML = "Not shown";
+        } else {
+          document.getElementById("link11").innerHTML = "Not shown";
         }
         break;
       default:
