@@ -372,6 +372,7 @@ function switchIt(variable, myRow) {
 }
 
 function updatePoints(selectObject, scoreID, points) {
+  alert("update points");
   var value = selectObject.value;
   if (value == "Pass") {
     document.getElementById(scoreID).innerHTML = points;
@@ -396,7 +397,7 @@ function updateScore() {
   for (let i = 1; i < 15; i++) {
     if (!isNaN(parseInt(document.getElementById("score" + i).innerHTML))) {
       totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
-      if(role == "DPS" && i == 9){
+      if((role == "DPS" && i == 9)){
         possiblePoints = parseInt(possiblePoints);
       } else if (!document.getElementById("drop" + i).classList.contains("lwcls")) {
         possiblePoints = parseInt(possiblePoints) + 10;
