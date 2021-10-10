@@ -1,17 +1,5 @@
-function pageInit() {
-  changeRole();
-  addListeners();
-}
-
-function addListeners() {
-  for (let i = 1; i < 15; i++) {
-    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
-      closeNotepad(i);
-    });
-  }
-}
-
 function changeRole() {
+  location.reload();
   var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Rotation", "Bar setup"];
   var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Holding taunt", "Blocking properly"];
   var dpsList = ["Full Rotations", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness", "Appropriate resurrections", "Bonus: Extra DPS Mechanic"];
@@ -34,11 +22,20 @@ function changeRole() {
   }
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
+  addListeners();
   clearNotes();
   classChanged();
   setColors();
   setGearDropdowns();
   setGearRows();
+}
+
+function addListeners() {
+  for (let i = 1; i < 15; i++) {
+    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
+      closeNotepad(i);
+    });
+  }
 }
 
 function clearNotes() {
