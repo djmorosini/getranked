@@ -14,20 +14,23 @@ function addListeners() {
 function changeRole() {
   var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Rotation", "Bar setup"];
   var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Holding taunt", "Blocking properly"];
-  var dpsList = ["Full Rotations", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness", "Extra DPS Mechanic", "Appropriate resurrections"];
+  var dpsList = ["Full Rotations", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness", "Appropriate resurrections", "Bonus: Extra DPS Mechanic"];
 
   if (document.getElementById("roleSelect").value == "Healer") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = healerList[i];
     }
+    document.getElementById("drop9").onchange = "updatePoints(this, 'score9', 10)";
   } else if (document.getElementById("roleSelect").value == "Tank") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = tankList[i];
     }
+    document.getElementById("drop9").onchange = "updatePoints(this, 'score9', 10)";
   } else if (document.getElementById("roleSelect").value == "DPS") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
+    document.getElementById("drop9").onchange = "updatePoints(this, 'score9', 20)";
   }
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
@@ -389,10 +392,13 @@ function updatePoints(selectObject, scoreID, points) {
 function updateScore() {
   var totalScore = 0;
   var possiblePoints = 0;
+  var role = document.getElementById("roleSelect").value;
   for (let i = 1; i < 15; i++) {
     if (!isNaN(parseInt(document.getElementById("score" + i).innerHTML))) {
       totalScore = parseInt(totalScore) + parseInt(document.getElementById('score' + i).innerHTML);
-      if (!document.getElementById("drop" + i).classList.contains("lwcls")) {
+      if(role == "DPS" && i == 9){
+        possiblePoints = parseInt(possiblePoints);
+      } else if (!document.getElementById("drop" + i).classList.contains("lwcls")) {
         possiblePoints = parseInt(possiblePoints) + 10;
       } else {
         possiblePoints = parseInt(possiblePoints) + 20;
