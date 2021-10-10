@@ -20,17 +20,17 @@ function changeRole() {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = healerList[i];
     }
-    document.getElementById("drop9").onchange = "updatePoints(this, 'score9', 10)";
+    document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 10)};
   } else if (document.getElementById("roleSelect").value == "Tank") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = tankList[i];
     }
-    document.getElementById("drop9").onchange = "updatePoints(this, 'score9', 10)";
+    document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 10)};
   } else if (document.getElementById("roleSelect").value == "DPS") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
-    document.getElementById("drop9").onchange = "updatePoints(this, 'score9', 20)";
+    document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 20)};
   }
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
@@ -372,7 +372,6 @@ function switchIt(variable, myRow) {
 }
 
 function updatePoints(selectObject, scoreID, points) {
-  alert("update points");
   var value = selectObject.value;
   if (value == "Pass") {
     document.getElementById(scoreID).innerHTML = points;
