@@ -460,6 +460,6 @@ function setTrialSelect() {
   } else if (role == "Tank") {
     document.getElementById("trialSelect").innerHTML = "<option selected='selected'>vCR MT</option><option>vCR HM</option><option>vAS OT</option><option>vSS OT</option><option>vRG</option><option>vKA HM</option><option>vSS HM</option><option>Oth</option>";
   } else if (role == "DPS") {
-    document.getElementById("trialSelect").innerHTML = "<option selected='selected'>vSS HM</option><option>vSS HM(Portal)</option><option>vAS HM</option><option>vAS HM(Interruptor)</option><option>vCR HM</option><option>vCR HM(Portal)</option><option>vKA HM</option><option>vRG HM</option><option>vRG HM(Portal)</option><option>vRG HM(Kite)</option>";
+    document.getElementById("trialSelect").innerHTML = "<option selected='selected'>vSS HM</option><option>vSS HM(Portal)</option><option>vAS HM</option><option>vAS HM(Interrupt)</option><option>vCR HM</option><option>vCR HM(Portal)</option><option>vKA HM</option><option>vRG HM</option><option>vRG HM(Portal)</option><option>vRG HM(Kite)</option>";
   }
 }
