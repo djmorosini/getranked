@@ -111,7 +111,7 @@ function actuallySetColors(background, header, row1, row2) {
   document.getElementById("roleSelect").style.backgroundColor = background;
   document.getElementById("psn").style.backgroundColor = row2;
   document.getElementById("classSelect").style.backgroundColor = row2;
-  document.getElementById("allNotes").style.backgroundColor = row2;
+  document.getElementById("allNotes").style.backgroundColor = row1;
   document.getElementById("bottomButton1").style.backgroundColor = row2;
   document.getElementById("bottomButton2").style.backgroundColor = row2;
   document.getElementById("trialSelect").style.backgroundColor = row2;
