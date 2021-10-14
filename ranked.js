@@ -27,6 +27,7 @@ function changeRole() {
   setColors();
   setGearDropdowns();
   setGearRows();
+  setTrialSelect();
 }
 
 function addListeners() {
@@ -450,4 +451,15 @@ function showAllNotes() {
     }
   }
   setColors();
+}
+
+function setTrialSelect() {
+  var role = document.getElementById("roleSelect").value;
+  if (role == "Healer") {
+    document.getElementById("trialSelect").innerHTML = "<option>vAA</option><option>vHRC</option><option>vMOL Twins</option><option>vSS Ice</option><option selected='selected'>vCR+0 kite</option><option>vCR+1 kite</option><option>vRG Bahsei kite</option><option>vASHM FK</option><option>vCRHM kite</option><option>vKAHM Falgravn</option><option>vSSHM Dragons</option><option>Other</option>";
+  } else if (role == "Tank") {
+    document.getElementById("trialSelect").innerHTML = "<option selected='selected'>vCR MT</option><option>vCR HM</option><option>vAS OT</option><option>vSS OT</option><option>vRG</option><option>vKA HM</option><option>vSS HM</option><option>Oth</option>";
+  } else if (role == "DPS") {
+    document.getElementById("trialSelect").innerHTML = "<option selected='selected'>vSS HM</option><option>vSS HM(Portal)</option><option>vAS HM</option><option>vAS HM(Interruptor)</option><option>vCR HM</option><option>vCR HM(Portal)</option><option>vKA HM</option><option>vRG HM</option><option>vRG HM(Portal)</option><option>vRG HM(Kite)</option>";
+  }
 }
