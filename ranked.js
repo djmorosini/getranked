@@ -17,7 +17,7 @@ function changeRole() {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
-    document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 20)};
+    document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 10)};
   }
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
