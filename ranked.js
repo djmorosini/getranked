@@ -29,13 +29,6 @@ function pageInit() {
   setColors();
 }
 
-function changeRole() {
-  var role = document.getElementById("roleSelect").value;
-  location.reload();
-  document.getElementById("roleSelect").value = role;
-  pageInit();
-}
-
 function addListeners() {
   for (let i = 1; i < 15; i++) {
     document.getElementById('notes' + i).addEventListener('focusout', function (e) {
