@@ -21,6 +21,7 @@ function pageInit() {
   }
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
+  clearPage();
   addListeners();
   setClassRows();
   setGearDropdowns();
@@ -34,6 +35,12 @@ function addListeners() {
     document.getElementById('notes' + i).addEventListener('focusout', function (e) {
       closeNotepad(i);
     });
+  }
+}
+
+function clearPage() {
+  for(let i = 1; i < 15; i++) {
+    document.getElementById("notes" + i).value = "";
   }
 }
 
