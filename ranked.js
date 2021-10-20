@@ -1,19 +1,19 @@
-function changeRole() {
+function pageInit() {
+  var role = document.getElementById("roleSelect").value;
   var healerList = ["Elemental Drain uptime", "Combat Prayer usage & uptime", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Rotation", "Bar setup"];
   var tankList = ["Elemental Drain uptime", "Brittle uptimes", "Adds debuffed", "Apporpriate Ultimate usage", "Callouts, including Warhorns", "Positioning", "Situational Awareness", "Holding taunt", "Blocking properly"];
   var dpsList = ["Full Rotations", "Survivability", "Appropriate Mob Focus", "Ultimate Usage/Callout", "Proper Bar Setup", "Mechanics Knowledge", "Situational Awareness", "Appropriate resurrections", "Bonus: Extra DPS Mechanic"];
-
-  if (document.getElementById("roleSelect").value == "Healer") {
+  if (role == "Healer") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = healerList[i];
     }
     document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 10)};
-  } else if (document.getElementById("roleSelect").value == "Tank") {
+  } else if (role == "Tank") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = tankList[i];
     }
     document.getElementById("drop9").onchange = function(){updatePoints(this, 'score9', 10)};
-  } else if (document.getElementById("roleSelect").value == "DPS") {
+  } else if (role == "DPS") {
     for (let i = 0; i < 9; i++) {
       document.getElementById("link" + (i + 1)).innerHTML = dpsList[i];
     }
@@ -22,12 +22,18 @@ function changeRole() {
   document.getElementById("link12").innerHTML = "";
   document.getElementById("link14").innerHTML = "";
   addListeners();
-  clearNotes();
-  classChanged();
-  setColors();
+  setClassRows();
   setGearDropdowns();
   setGearRows();
-  setTrialSelect();
+  setTrialDropdown();
+  setColors();
+}
+
+function changeRole() {
+  var role = document.getElementById("roleSelect").value;
+  location.reload();
+  document.getElementById("roleSelect").value = role;
+  pageInit();
 }
 
 function addListeners() {
@@ -38,13 +44,7 @@ function addListeners() {
   }
 }
 
-function clearNotes() {
-  for(let i = 1; i < 15; i++) {
-    document.getElementById("notes" + i).value = "";
-  }
-}
-
-function classChanged() {
+function setClassRows() {
   var characterClass = document.getElementById("classSelect").value;
   var role = document.getElementById("roleSelect").value;
   if (role == "Healer") {
@@ -453,7 +453,7 @@ function showAllNotes() {
   setColors();
 }
 
-function setTrialSelect() {
+function setTrialDropdown() {
   var role = document.getElementById("roleSelect").value;
   if (role == "Healer") {
     document.getElementById("trialSelect").innerHTML = "<option>vAA</option><option>vHRC</option><option>vMOL Twins</option><option>vSS Ice</option><option selected='selected'>vCR+0 kite</option><option>vCR+1 kite</option><option>vRG Bahsei kite</option><option>vASHM FK</option><option>vCRHM kite</option><option>vKAHM Falgravn</option><option>vSSHM Dragons</option><option>Other</option>";
