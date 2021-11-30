@@ -112,7 +112,7 @@ function setColors() {
 
 function actuallySetColors(background, header, row1, row2) {
   document.body.style.backgroundColor = background;
-  document.getElementById("roleSelect").style.backgroundColor = row1;
+  document.getElementById("roleSelect").style.backgroundColor = background;
   document.getElementById("psn").style.backgroundColor = row2;
   document.getElementById("classSelect").style.backgroundColor = row2;
   document.getElementById("allNotes").style.backgroundColor = row1;
