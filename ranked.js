@@ -112,7 +112,7 @@ function setColors() {
 
 function actuallySetColors(background, header, row1, row2) {
   document.body.style.backgroundColor = background;
-  document.getElementById("roleSelect").style.backgroundColor = background;
+  document.getElementById("roleSelect").style.backgroundColor = row1;
   document.getElementById("psn").style.backgroundColor = row2;
   document.getElementById("classSelect").style.backgroundColor = row2;
   document.getElementById("allNotes").style.backgroundColor = row1;
@@ -121,7 +121,7 @@ function actuallySetColors(background, header, row1, row2) {
   document.getElementById("trialSelect").style.backgroundColor = row2;
   document.getElementById("gear1").style.backgroundColor = row2;
   document.getElementById("gear2").style.backgroundColor = row2;
-  document.getElementById("roleSelect").style.backgroundColor = row2;
+  document.getElementById("roleSelect").style.color = row2;
   for (let i = 1; i < 6; i++) {
     document.getElementById("table" + i).style.backgroundColor = row1;
   }
