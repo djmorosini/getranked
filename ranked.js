@@ -30,11 +30,15 @@ function pageInit() {
   setColors();
 }
 
+var listenersAttached = false;
 function addListeners() {
-  for (let i = 1; i < 15; i++) {
-    document.getElementById('notes' + i).addEventListener('focusout', function (e) {
-      closeNotepad(i);
-    });
+  if(!listenersAttached) {
+    for (let i = 1; i < 15; i++) {
+      document.getElementById('notes' + i).addEventListener('focusout', function (e) {
+        closeNotepad(i);
+      });
+    }
+    listenersAttached = true;
   }
 }
 
